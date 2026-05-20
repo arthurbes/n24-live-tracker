@@ -16,5 +16,5 @@ COPY --from=base /app/frontend/node_modules ./node_modules
 COPY --from=base /app/frontend/package.json ./package.json
 COPY . .
 COPY --from=builder /app/frontend/dist ./dist
-EXPOSE 5173
+EXPOSE 8000
 ENTRYPOINT ["npm", "run", "dev"]
