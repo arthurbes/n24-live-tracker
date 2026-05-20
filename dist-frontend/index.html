@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>N24H LIVE TRACKER - GREEN HELL</title>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="N24H Live Tracker" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet"/>
+  
+  <script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "surface": "#131313",
+                    "error-container": "#93000a",
+                    "outline": "#b08781",
+                    "tertiary-container": "#006ee7",
+                    "error": "#ffb4ab",
+                    "surface-container-highest": "#353534",
+                    "surface-container": "#201f1f",
+                    "secondary-container": "#c3f400",
+                    "on-primary-container": "#fff7f5",
+                    "secondary-fixed-dim": "#abd600",
+                    "inverse-primary": "#c00000",
+                    "inverse-surface": "#e5e2e1",
+                    "on-secondary": "#283500",
+                    "on-error-container": "#ffdad6",
+                    "surface-dim": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "on-primary": "#690000",
+                    "on-background": "#e5e2e1",
+                    "on-primary-fixed-variant": "#930100",
+                    "primary": "#ffb4a8",
+                    "surface-container-low": "#1c1b1b",
+                    "secondary-fixed": "#c3f400",
+                    "on-error": "#690005",
+                    "surface-tint": "#ffb4a8",
+                    "outline-variant": "#5f3f3a",
+                    "on-tertiary-fixed-variant": "#004493",
+                    "on-secondary-container": "#556d00",
+                    "on-tertiary": "#002e69",
+                    "surface-container-lowest": "#0e0e0e",
+                    "tertiary": "#adc6ff",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "tertiary-fixed": "#d8e2ff",
+                    "surface-bright": "#393939",
+                    "surface-container-high": "#2a2a2a",
+                    "on-surface": "#e5e2e1",
+                    "secondary": "#ffffff",
+                    "on-secondary-fixed": "#161e00",
+                    "surface-variant": "#353534",
+                    "on-surface-variant": "#e9bcb5",
+                    "on-primary-fixed": "#410000",
+                    "on-secondary-fixed-variant": "#3c4d00",
+                    "on-tertiary-fixed": "#001a41",
+                    "background": "#131313",
+                    "on-tertiary-container": "#f9f8ff",
+                    "primary-fixed": "#ffdad4",
+                    "primary-container": "#e60000",
+                    "tertiary-fixed-dim": "#adc6ff"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "margin-mobile": "16px",
+                    "margin-desktop": "32px",
+                    "gutter": "8px",
+                    "unit": "4px",
+                    "widget-padding": "12px"
+                },
+                "fontFamily": {
+                    "display-lg": ["Geist"],
+                    "body-fixed": ["JetBrains Mono"],
+                    "status-sm": ["JetBrains Mono"],
+                    "headline-lg": ["Geist"],
+                    "headline-lg-mobile": ["Geist"],
+                    "display-md": ["Geist"],
+                    "label-caps": ["JetBrains Mono"]
+                },
+                "fontSize": {
+                    "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                    "body-fixed": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                    "status-sm": ["10px", { "lineHeight": "12px", "fontWeight": "700" }],
+                    "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                    "headline-lg-mobile": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                    "display-md": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                }
+            }
+        }
+    }
+  </script>
+  <style>
+    body {
+        background-color: #0A0A0A;
+        background-image: 
+            linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+    }
+  </style>
+</head>
+<body class="text-on-background min-h-screen overflow-hidden flex flex-col font-body-fixed text-body-fixed selection:bg-secondary-container selection:text-on-secondary-container">
+  <div id="root" class="flex-grow flex flex-col h-full"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
