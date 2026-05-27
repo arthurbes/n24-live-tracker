@@ -1,17 +1,434 @@
 {
   "type": "FeatureCollection",
   "features": [
-    { "type": "Feature", "properties": { "name": "Flugplatz" }, "geometry": { "type": "Point", "coordinates": [6.9583, 50.3475] } },
-    { "type": "Feature", "properties": { "name": "Schwedenkreuz" }, "geometry": { "type": "Point", "coordinates": [6.9650, 50.3550] } },
-    { "type": "Feature", "properties": { "name": "Fuchsröhre" }, "geometry": { "type": "Point", "coordinates": [6.9530, 50.3620] } },
-    { "type": "Feature", "properties": { "name": "Adenauer Forst" }, "geometry": { "type": "Point", "coordinates": [6.9440, 50.3700] } },
-    { "type": "Feature", "properties": { "name": "Wehrseifen" }, "geometry": { "type": "Point", "coordinates": [6.9400, 50.3770] } },
-    { "type": "Feature", "properties": { "name": "Bergwerk" }, "geometry": { "type": "Point", "coordinates": [6.9600, 50.3790] } },
-    { "type": "Feature", "properties": { "name": "Karussell" }, "geometry": { "type": "Point", "coordinates": [6.9850, 50.3700] } },
-    { "type": "Feature", "properties": { "name": "Hohe Acht" }, "geometry": { "type": "Point", "coordinates": [6.9950, 50.3720] } },
-    { "type": "Feature", "properties": { "name": "Brünnchen" }, "geometry": { "type": "Point", "coordinates": [7.0000, 50.3650] } },
-    { "type": "Feature", "properties": { "name": "Pflanzgarten" }, "geometry": { "type": "Point", "coordinates": [6.9950, 50.3550] } },
-    { "type": "Feature", "properties": { "name": "Schwalbenschwanz" }, "geometry": { "type": "Point", "coordinates": [6.9850, 50.3450] } },
-    { "type": "Feature", "properties": { "name": "Döttinger Höhe" }, "geometry": { "type": "Point", "coordinates": [6.9700, 50.3350] } }
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.925133,
+          50.3600104
+        ]
+      },
+      "properties": {
+        "name": "Fuchsröhre"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9605344,
+          50.3809067
+        ]
+      },
+      "properties": {
+        "name": "Bergwerk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9856528,
+          50.3717236
+        ]
+      },
+      "properties": {
+        "name": "Caracciola Karussell "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9896868,
+          50.3731541
+        ]
+      },
+      "properties": {
+        "name": "Hohe Acht"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.0054505,
+          50.3699443
+        ]
+      },
+      "properties": {
+        "name": "Brünnchen"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9995827,
+          50.3655899
+        ]
+      },
+      "properties": {
+        "name": "Pflanzgarten"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9880741,
+          50.3583545
+        ]
+      },
+      "properties": {
+        "name": "Schwalbenschwanz"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Döttinger Höhe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9824227,
+          50.3524131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wippermann"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.0006559,
+          50.3751907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Steilstrecke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.989216,
+          50.3740065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Klostertal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9845294,
+          50.3740866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mutkurve"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9798243,
+          50.3722669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kesselchen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9706298,
+          50.374408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lauda-Links"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9575725,
+          50.3797612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Exmühle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9504152,
+          50.3783109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Breidscheid"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9472748,
+          50.3768356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wehrseifen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9430329,
+          50.376123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dreifach-Rechts"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9378845,
+          50.3776478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kallenhard"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9344437,
+          50.373788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Spiegelkurve"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9364467,
+          50.3758256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Metzgesfeld"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9375178,
+          50.3722167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adenauer Forst"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9315256,
+          50.3660745
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aremberg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.919956,
+          50.3578537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Schwedenkreuz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9238863,
+          50.3558571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Flugplatz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9257877,
+          50.3466279
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Quiddelbacher Höhe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9273987,
+          50.3443778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hocheichen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9341449,
+          50.340201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hatzenbach"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.941273,
+          50.3380862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hatzenbogen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9463501,
+          50.337821
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sabine-Schmitz Kurve"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9482271,
+          50.3393487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hohenrain-Schikane"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9531865,
+          50.3381375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiergarten"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9559453,
+          50.3406208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Antoniusbuche"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9603502,
+          50.3437053
+        ]
+      }
+    }
   ]
 }

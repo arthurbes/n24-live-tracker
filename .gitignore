@@ -2,6 +2,14 @@ node_modules/
 dist/
 .env
 .DS_Store
+.continue/
 backend/output.log
 backend/replays/*.jsonl
 backend/replays/*.gz
+/docs/_site/
+/docs/.sass-cache/
+/docs/.jekyll-cache/
+/docs/.jekyll-metadata
+/docs/.bundle/
+/docs/vendor/
+/docs/Gemfile.lock

@@ -1,3447 +1,479 @@
 {
-    "type": "FeatureCollection",
-    "features": [
-        {
-            "type": "Feature",
-            "properties": {
-                "_gpxType": "trk",
-                "name": "Rad am Ring: 24h-Radrennen",
-                "desc": "Ein Rundkurs über die GP-Sprint-Strecke und über Nordschleife.",
-                "type": "racingBike",
-                "coordinateProperties": {
-                    "oa:Extensions": [
-                        17,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        12,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        12,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        12,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        12
-                    ],
-                    "oa:locTypes": [
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        "calcWayPoint",
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        "calcWayPoint",
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        "calcWayPoint",
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null,
-                        null
-                    ]
-                }
-            },
-            "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                    [
-                        6.94528,
-                        50.334019,
-                        613.85334
-                    ],
-                    [
-                        6.943628,
-                        50.332945,
-                        611.29471
-                    ],
-                    [
-                        6.942934,
-                        50.33247,
-                        608.09909
-                    ],
-                    [
-                        6.941474,
-                        50.331779,
-                        605.86411
-                    ],
-                    [
-                        6.941144,
-                        50.3317,
-                        605.85429
-                    ],
-                    [
-                        6.940948,
-                        50.331778,
-                        605.73558
-                    ],
-                    [
-                        6.940937,
-                        50.332021,
-                        605.74328
-                    ],
-                    [
-                        6.941658,
-                        50.333,
-                        606.54279
-                    ],
-                    [
-                        6.941587,
-                        50.333307,
-                        609.21665
-                    ],
-                    [
-                        6.941268,
-                        50.333557,
-                        608.86374
-                    ],
-                    [
-                        6.940744,
-                        50.333623,
-                        609.68787
-                    ],
-                    [
-                        6.939969,
-                        50.333546,
-                        606.93722
-                    ],
-                    [
-                        6.939309,
-                        50.333436,
-                        604.39949
-                    ],
-                    [
-                        6.938683,
-                        50.333216,
-                        603.70649
-                    ],
-                    [
-                        6.938609,
-                        50.333015,
-                        603.03349
-                    ],
-                    [
-                        6.938695,
-                        50.332842,
-                        602.68638
-                    ],
-                    [
-                        6.939728,
-                        50.33265,
-                        602.78985
-                    ],
-                    [
-                        6.939945,
-                        50.332537,
-                        603.46758
-                    ],
-                    [
-                        6.939972,
-                        50.332003,
-                        602.99182
-                    ],
-                    [
-                        6.939561,
-                        50.330507,
-                        604.03097
-                    ],
-                    [
-                        6.939044,
-                        50.329443,
-                        602.77243
-                    ],
-                    [
-                        6.938904,
-                        50.329294,
-                        602.31349
-                    ],
-                    [
-                        6.938657,
-                        50.329233,
-                        601.32876
-                    ],
-                    [
-                        6.938483,
-                        50.32924,
-                        601.08587
-                    ],
-                    [
-                        6.938274,
-                        50.329263,
-                        600.48618
-                    ],
-                    [
-                        6.938057,
-                        50.329388,
-                        600.08823
-                    ],
-                    [
-                        6.937981,
-                        50.329505,
-                        599.96806
-                    ],
-                    [
-                        6.938032,
-                        50.329745,
-                        600.60932
-                    ],
-                    [
-                        6.938679,
-                        50.331053,
-                        604.58917
-                    ],
-                    [
-                        6.938743,
-                        50.331474,
-                        605.01781
-                    ],
-                    [
-                        6.938571,
-                        50.331647,
-                        605.50079
-                    ],
-                    [
-                        6.936662,
-                        50.332195,
-                        603.81623
-                    ],
-                    [
-                        6.936452,
-                        50.332352,
-                        602.99662
-                    ],
-                    [
-                        6.936353,
-                        50.332748,
-                        600.77647
-                    ],
-                    [
-                        6.936742,
-                        50.333169,
-                        597.86556
-                    ],
-                    [
-                        6.939548,
-                        50.335338,
-                        586.91021
-                    ],
-                    [
-                        6.939985,
-                        50.335578,
-                        586.85513
-                    ],
-                    [
-                        6.940875,
-                        50.335785,
-                        588.04056
-                    ],
-                    [
-                        6.941573,
-                        50.335898,
-                        588.50753
-                    ],
-                    [
-                        6.942832,
-                        50.336118,
-                        592.15729
-                    ],
-                    [
-                        6.942839,
-                        50.336119,
-                        592.17353
-                    ],
-                    [
-                        6.943313,
-                        50.336202,
-                        593.61068
-                    ],
-                    [
-                        6.944101,
-                        50.33634,
-                        596.76545
-                    ],
-                    [
-                        6.945634,
-                        50.336614,
-                        604.88294
-                    ],
-                    [
-                        6.945956,
-                        50.336665,
-                        606.89752
-                    ],
-                    [
-                        6.94631,
-                        50.336739,
-                        607.98968
-                    ],
-                    [
-                        6.946546,
-                        50.336949,
-                        609.23157
-                    ],
-                    [
-                        6.946696,
-                        50.337175,
-                        610.77901
-                    ],
-                    [
-                        6.946841,
-                        50.337292,
-                        611.75942
-                    ],
-                    [
-                        6.947179,
-                        50.337381,
-                        613.28875
-                    ],
-                    [
-                        6.94753,
-                        50.337434,
-                        614.28784
-                    ],
-                    [
-                        6.94789,
-                        50.337468,
-                        615.17484
-                    ],
-                    [
-                        6.948091,
-                        50.337475,
-                        616.11474
-                    ],
-                    [
-                        6.948152,
-                        50.337451,
-                        616.14406
-                    ],
-                    [
-                        6.948281,
-                        50.336992,
-                        617.12535
-                    ],
-                    [
-                        6.948265,
-                        50.336881,
-                        616.93956
-                    ],
-                    [
-                        6.948131,
-                        50.336807,
-                        616.58987
-                    ],
-                    [
-                        6.947425,
-                        50.336487,
-                        616.42977
-                    ],
-                    [
-                        6.946245,
-                        50.336148,
-                        617.05423
-                    ],
-                    [
-                        6.945752,
-                        50.335905,
-                        618.19998
-                    ],
-                    [
-                        6.943847,
-                        50.334641,
-                        615.30507
-                    ],
-                    [
-                        6.943708,
-                        50.334597,
-                        614.41994
-                    ],
-                    [
-                        6.94352,
-                        50.334624,
-                        614.46784
-                    ],
-                    [
-                        6.943085,
-                        50.334768,
-                        614.13462
-                    ],
-                    [
-                        6.942801,
-                        50.334778,
-                        613.0725
-                    ],
-                    [
-                        6.942329,
-                        50.33464,
-                        612.82655
-                    ],
-                    [
-                        6.941924,
-                        50.334472,
-                        611.73322
-                    ],
-                    [
-                        6.94175,
-                        50.334316,
-                        612.6727
-                    ],
-                    [
-                        6.941729,
-                        50.334193,
-                        612.4766
-                    ],
-                    [
-                        6.941755,
-                        50.334032,
-                        612.71219
-                    ],
-                    [
-                        6.941959,
-                        50.33384,
-                        614.41841
-                    ],
-                    [
-                        6.942205,
-                        50.333614,
-                        613.6533
-                    ],
-                    [
-                        6.942713,
-                        50.333308,
-                        611.75274
-                    ],
-                    [
-                        6.942402,
-                        50.333085,
-                        609.06996
-                    ],
-                    [
-                        6.942319,
-                        50.332941,
-                        608.45558
-                    ],
-                    [
-                        6.941954,
-                        50.332686,
-                        607.87776
-                    ],
-                    [
-                        6.941715,
-                        50.332414,
-                        607.96057
-                    ],
-                    [
-                        6.941613,
-                        50.332224,
-                        607.93323
-                    ],
-                    [
-                        6.941509,
-                        50.332178,
-                        607.18997
-                    ],
-                    [
-                        6.941434,
-                        50.332214,
-                        606.35572
-                    ],
-                    [
-                        6.941396,
-                        50.332248,
-                        606.09881
-                    ],
-                    [
-                        6.941375,
-                        50.332291,
-                        606.05485
-                    ],
-                    [
-                        6.941332,
-                        50.332298,
-                        605.93807
-                    ],
-                    [
-                        6.941198,
-                        50.332178,
-                        605.85845
-                    ],
-                    [
-                        6.941079,
-                        50.331998,
-                        605.80373
-                    ],
-                    [
-                        6.941082,
-                        50.331859,
-                        605.70972
-                    ],
-                    [
-                        6.941198,
-                        50.331803,
-                        605.76513
-                    ],
-                    [
-                        6.941501,
-                        50.331896,
-                        607.15787
-                    ],
-                    [
-                        6.942862,
-                        50.332512,
-                        608.46897
-                    ],
-                    [
-                        6.943878,
-                        50.333272,
-                        612.48393
-                    ],
-                    [
-                        6.94981,
-                        50.337106,
-                        618.75945
-                    ],
-                    [
-                        6.949937,
-                        50.337212,
-                        618.973
-                    ],
-                    [
-                        6.949931,
-                        50.337346,
-                        619.28941
-                    ],
-                    [
-                        6.949886,
-                        50.337476,
-                        619.45638
-                    ],
-                    [
-                        6.949712,
-                        50.337629,
-                        618.34374
-                    ],
-                    [
-                        6.94952,
-                        50.337708,
-                        618.04114
-                    ],
-                    [
-                        6.949472,
-                        50.337744,
-                        618.15924
-                    ],
-                    [
-                        6.949507,
-                        50.337819,
-                        618.88363
-                    ],
-                    [
-                        6.949636,
-                        50.337918,
-                        620.21432
-                    ],
-                    [
-                        6.949738,
-                        50.338095,
-                        621.4086
-                    ],
-                    [
-                        6.949646,
-                        50.33838,
-                        622.86348
-                    ],
-                    [
-                        6.948654,
-                        50.3392,
-                        623.60244
-                    ],
-                    [
-                        6.948356,
-                        50.339324,
-                        624.34681
-                    ],
-                    [
-                        6.94808,
-                        50.339291,
-                        623.31979
-                    ],
-                    [
-                        6.947761,
-                        50.339072,
-                        621.04566
-                    ],
-                    [
-                        6.94691,
-                        50.3381,
-                        610.73906
-                    ],
-                    [
-                        6.94668,
-                        50.33796,
-                        608.79032
-                    ],
-                    [
-                        6.94571,
-                        50.33756,
-                        601.36154
-                    ],
-                    [
-                        6.9449,
-                        50.33735,
-                        594.62897
-                    ],
-                    [
-                        6.94414,
-                        50.33736,
-                        588.29087
-                    ],
-                    [
-                        6.94392,
-                        50.33741,
-                        588.02218
-                    ],
-                    [
-                        6.943485,
-                        50.337556,
-                        586.30352
-                    ],
-                    [
-                        6.943049,
-                        50.337702,
-                        585.30291
-                    ],
-                    [
-                        6.94258,
-                        50.33786,
-                        584.44644
-                    ],
-                    [
-                        6.9424,
-                        50.33791,
-                        584.21196
-                    ],
-                    [
-                        6.94152,
-                        50.33806,
-                        582.16132
-                    ],
-                    [
-                        6.94063,
-                        50.33813,
-                        580.1137
-                    ],
-                    [
-                        6.93984,
-                        50.33814,
-                        578.77236
-                    ],
-                    [
-                        6.93912,
-                        50.33796,
-                        575.98834
-                    ],
-                    [
-                        6.93886,
-                        50.33797,
-                        575.48039
-                    ],
-                    [
-                        6.93816,
-                        50.33828,
-                        574.98759
-                    ],
-                    [
-                        6.93758,
-                        50.33894,
-                        578.52772
-                    ],
-                    [
-                        6.93662,
-                        50.33941,
-                        574.80957
-                    ],
-                    [
-                        6.93622,
-                        50.33994,
-                        576.65623
-                    ],
-                    [
-                        6.93603,
-                        50.34001,
-                        576.97413
-                    ],
-                    [
-                        6.93402,
-                        50.34022,
-                        575.45334
-                    ],
-                    [
-                        6.93376,
-                        50.3403,
-                        573.81189
-                    ],
-                    [
-                        6.93356,
-                        50.34053,
-                        575.00804
-                    ],
-                    [
-                        6.93345,
-                        50.34102,
-                        572.00422
-                    ],
-                    [
-                        6.93312,
-                        50.34131,
-                        568.03649
-                    ],
-                    [
-                        6.93097,
-                        50.34228,
-                        556.352
-                    ],
-                    [
-                        6.93005,
-                        50.34267,
-                        556.06171
-                    ],
-                    [
-                        6.92915,
-                        50.34309,
-                        555.59696
-                    ],
-                    [
-                        6.92889,
-                        50.34324,
-                        555.71422
-                    ],
-                    [
-                        6.9285,
-                        50.34354,
-                        556.92998
-                    ],
-                    [
-                        6.928188,
-                        50.343783,
-                        559.47073
-                    ],
-                    [
-                        6.927877,
-                        50.344027,
-                        562.09241
-                    ],
-                    [
-                        6.92731,
-                        50.34447,
-                        567.20685
-                    ],
-                    [
-                        6.927005,
-                        50.344717,
-                        570.15949
-                    ],
-                    [
-                        6.9267,
-                        50.344964,
-                        573.1752
-                    ],
-                    [
-                        6.926395,
-                        50.34521,
-                        576.02192
-                    ],
-                    [
-                        6.92626,
-                        50.34532,
-                        577.08924
-                    ],
-                    [
-                        6.92593,
-                        50.34576,
-                        578.67692
-                    ],
-                    [
-                        6.925828,
-                        50.346145,
-                        579.25285
-                    ],
-                    [
-                        6.92583,
-                        50.3467,
-                        580.75492
-                    ],
-                    [
-                        6.92656,
-                        50.34788,
-                        580.26647
-                    ],
-                    [
-                        6.92676,
-                        50.3486,
-                        580.9393
-                    ],
-                    [
-                        6.92692,
-                        50.34932,
-                        580.84111
-                    ],
-                    [
-                        6.92695,
-                        50.34963,
-                        580.67936
-                    ],
-                    [
-                        6.92671,
-                        50.3513,
-                        571.88823
-                    ],
-                    [
-                        6.92634,
-                        50.35223,
-                        562.26214
-                    ],
-                    [
-                        6.92616,
-                        50.35252,
-                        560.16339
-                    ],
-                    [
-                        6.92594,
-                        50.35285,
-                        558.59725
-                    ],
-                    [
-                        6.925736,
-                        50.353136,
-                        557.31046
-                    ],
-                    [
-                        6.925532,
-                        50.353422,
-                        556.70661
-                    ],
-                    [
-                        6.925328,
-                        50.353709,
-                        556.66995
-                    ],
-                    [
-                        6.92512,
-                        50.354,
-                        556.51198
-                    ],
-                    [
-                        6.924937,
-                        50.354292,
-                        555.55195
-                    ],
-                    [
-                        6.924754,
-                        50.354584,
-                        554.6305
-                    ],
-                    [
-                        6.9247,
-                        50.35467,
-                        554.37555
-                    ],
-                    [
-                        6.92435,
-                        50.35524,
-                        552.65004
-                    ],
-                    [
-                        6.92405,
-                        50.35568,
-                        551.06957
-                    ],
-                    [
-                        6.92377,
-                        50.35598,
-                        549.27569
-                    ],
-                    [
-                        6.92313,
-                        50.35645,
-                        544.82966
-                    ],
-                    [
-                        6.92257,
-                        50.35672,
-                        542.52646
-                    ],
-                    [
-                        6.92214,
-                        50.35687,
-                        540.69054
-                    ],
-                    [
-                        6.9217,
-                        50.357,
-                        539.15033
-                    ],
-                    [
-                        6.921251,
-                        50.357128,
-                        537.82704
-                    ],
-                    [
-                        6.920801,
-                        50.357256,
-                        536.52591
-                    ],
-                    [
-                        6.92054,
-                        50.35733,
-                        535.62399
-                    ],
-                    [
-                        6.92028,
-                        50.35742,
-                        534.62384
-                    ],
-                    [
-                        6.92002,
-                        50.35764,
-                        533.41549
-                    ],
-                    [
-                        6.91997,
-                        50.35793,
-                        531.71837
-                    ],
-                    [
-                        6.92033,
-                        50.35829,
-                        527.7116
-                    ],
-                    [
-                        6.92089,
-                        50.35845,
-                        523.65363
-                    ],
-                    [
-                        6.92151,
-                        50.35861,
-                        519.4624
-                    ],
-                    [
-                        6.921963,
-                        50.358732,
-                        516.32145
-                    ],
-                    [
-                        6.922417,
-                        50.358854,
-                        513.13565
-                    ],
-                    [
-                        6.92255,
-                        50.35889,
-                        512.18123
-                    ],
-                    [
-                        6.92332,
-                        50.35911,
-                        506.35824
-                    ],
-                    [
-                        6.92396,
-                        50.35936,
-                        501.58872
-                    ],
-                    [
-                        6.92465,
-                        50.35977,
-                        496.43891
-                    ],
-                    [
-                        6.92582,
-                        50.3603,
-                        484.08092
-                    ],
-                    [
-                        6.92639,
-                        50.36067,
-                        477.59211
-                    ],
-                    [
-                        6.926727,
-                        50.360899,
-                        473.86292
-                    ],
-                    [
-                        6.927063,
-                        50.361129,
-                        470.26693
-                    ],
-                    [
-                        6.92708,
-                        50.36114,
-                        470.09022
-                    ],
-                    [
-                        6.92839,
-                        50.36187,
-                        458.09881
-                    ],
-                    [
-                        6.92916,
-                        50.3624,
-                        454.6235
-                    ],
-                    [
-                        6.92946,
-                        50.36267,
-                        453.47156
-                    ],
-                    [
-                        6.9298,
-                        50.36314,
-                        452.76044
-                    ],
-                    [
-                        6.9304,
-                        50.36411,
-                        453.68386
-                    ],
-                    [
-                        6.93042,
-                        50.36429,
-                        455.34834
-                    ],
-                    [
-                        6.93041,
-                        50.36447,
-                        457.83817
-                    ],
-                    [
-                        6.930395,
-                        50.364784,
-                        462.3062
-                    ],
-                    [
-                        6.93038,
-                        50.36511,
-                        466.46842
-                    ],
-                    [
-                        6.93048,
-                        50.36536,
-                        467.4612
-                    ],
-                    [
-                        6.93075,
-                        50.36558,
-                        468.30191
-                    ],
-                    [
-                        6.93145,
-                        50.36592,
-                        472.51514
-                    ],
-                    [
-                        6.93161,
-                        50.36614,
-                        473.94868
-                    ],
-                    [
-                        6.93162,
-                        50.36635,
-                        475.17317
-                    ],
-                    [
-                        6.93121,
-                        50.36668,
-                        477.14623
-                    ],
-                    [
-                        6.93126,
-                        50.367,
-                        477.82359
-                    ],
-                    [
-                        6.93176,
-                        50.36734,
-                        475.84448
-                    ],
-                    [
-                        6.93344,
-                        50.36818,
-                        468.77547
-                    ],
-                    [
-                        6.93395,
-                        50.36851,
-                        469.29947
-                    ],
-                    [
-                        6.93464,
-                        50.36901,
-                        469.43066
-                    ],
-                    [
-                        6.93648,
-                        50.37015,
-                        465.37536
-                    ],
-                    [
-                        6.93683,
-                        50.37044,
-                        463.98319
-                    ],
-                    [
-                        6.93755,
-                        50.3711,
-                        459.80942
-                    ],
-                    [
-                        6.93771,
-                        50.37152,
-                        458.57125
-                    ],
-                    [
-                        6.93767,
-                        50.37191,
-                        457.92808
-                    ],
-                    [
-                        6.93732,
-                        50.37276,
-                        456.2686
-                    ],
-                    [
-                        6.93707,
-                        50.37309,
-                        455.9791
-                    ],
-                    [
-                        6.93662,
-                        50.37325,
-                        456.28033
-                    ],
-                    [
-                        6.93562,
-                        50.3733,
-                        455.77106
-                    ],
-                    [
-                        6.93428,
-                        50.37386,
-                        449.92824
-                    ],
-                    [
-                        6.93371,
-                        50.37418,
-                        442.70692
-                    ],
-                    [
-                        6.93364,
-                        50.37432,
-                        440.41609
-                    ],
-                    [
-                        6.93369,
-                        50.37455,
-                        437.08408
-                    ],
-                    [
-                        6.93386,
-                        50.37469,
-                        436.25491
-                    ],
-                    [
-                        6.934,
-                        50.37474,
-                        435.98718
-                    ],
-                    [
-                        6.93448,
-                        50.3749,
-                        431.54713
-                    ],
-                    [
-                        6.934915,
-                        50.375047,
-                        426.3598
-                    ],
-                    [
-                        6.935351,
-                        50.375193,
-                        424.02833
-                    ],
-                    [
-                        6.93549,
-                        50.37524,
-                        423.82571
-                    ],
-                    [
-                        6.93655,
-                        50.37582,
-                        419.12608
-                    ],
-                    [
-                        6.93668,
-                        50.37596,
-                        417.6187
-                    ],
-                    [
-                        6.93693,
-                        50.37668,
-                        406.14083
-                    ],
-                    [
-                        6.93736,
-                        50.37715,
-                        402.61354
-                    ],
-                    [
-                        6.93783,
-                        50.37756,
-                        399.30668
-                    ],
-                    [
-                        6.93836,
-                        50.37776,
-                        397.04013
-                    ],
-                    [
-                        6.9389,
-                        50.37785,
-                        394.17346
-                    ],
-                    [
-                        6.9399,
-                        50.37772,
-                        391.14439
-                    ],
-                    [
-                        6.94055,
-                        50.37747,
-                        390.18188
-                    ],
-                    [
-                        6.940952,
-                        50.377289,
-                        388.87942
-                    ],
-                    [
-                        6.941354,
-                        50.377107,
-                        386.987
-                    ],
-                    [
-                        6.941756,
-                        50.376926,
-                        384.36849
-                    ],
-                    [
-                        6.94208,
-                        50.37678,
-                        380.90271
-                    ],
-                    [
-                        6.94229,
-                        50.37667,
-                        378.6465
-                    ],
-                    [
-                        6.94261,
-                        50.37624,
-                        376.45463
-                    ],
-                    [
-                        6.94283,
-                        50.3761,
-                        374.35544
-                    ],
-                    [
-                        6.94318,
-                        50.37612,
-                        371.29179
-                    ],
-                    [
-                        6.94367,
-                        50.37655,
-                        365.1132
-                    ],
-                    [
-                        6.94434,
-                        50.37669,
-                        364.4326
-                    ],
-                    [
-                        6.94483,
-                        50.376719,
-                        363.95069
-                    ],
-                    [
-                        6.94567,
-                        50.37677,
-                        360.08869
-                    ],
-                    [
-                        6.946162,
-                        50.376782,
-                        357.5206
-                    ],
-                    [
-                        6.946653,
-                        50.376794,
-                        355.30744
-                    ],
-                    [
-                        6.947145,
-                        50.376805,
-                        352.74146
-                    ],
-                    [
-                        6.94733,
-                        50.37681,
-                        351.26614
-                    ],
-                    [
-                        6.947811,
-                        50.376743,
-                        347.27803
-                    ],
-                    [
-                        6.948291,
-                        50.376676,
-                        344.57233
-                    ],
-                    [
-                        6.948772,
-                        50.376609,
-                        343.49769
-                    ],
-                    [
-                        6.94891,
-                        50.37659,
-                        343.44962
-                    ],
-                    [
-                        6.94945,
-                        50.37656,
-                        342.48853
-                    ],
-                    [
-                        6.9498,
-                        50.37669,
-                        337.39919
-                    ],
-                    [
-                        6.95029,
-                        50.37726,
-                        330.37534
-                    ],
-                    [
-                        6.95037,
-                        50.37761,
-                        334.91858
-                    ],
-                    [
-                        6.95034,
-                        50.37817,
-                        341.77396
-                    ],
-                    [
-                        6.95041,
-                        50.37833,
-                        343.10291
-                    ],
-                    [
-                        6.95068,
-                        50.37848,
-                        345.53816
-                    ],
-                    [
-                        6.951126,
-                        50.378613,
-                        348.59901
-                    ],
-                    [
-                        6.951572,
-                        50.378746,
-                        350.2801
-                    ],
-                    [
-                        6.95162,
-                        50.37876,
-                        350.41955
-                    ],
-                    [
-                        6.95241,
-                        50.37895,
-                        352.39642
-                    ],
-                    [
-                        6.952884,
-                        50.379034,
-                        354.40298
-                    ],
-                    [
-                        6.95343,
-                        50.37913,
-                        354.63654
-                    ],
-                    [
-                        6.953905,
-                        50.379211,
-                        353.87006
-                    ],
-                    [
-                        6.954381,
-                        50.379292,
-                        354.03978
-                    ],
-                    [
-                        6.954856,
-                        50.379374,
-                        354.71759
-                    ],
-                    [
-                        6.95501,
-                        50.3794,
-                        354.77223
-                    ],
-                    [
-                        6.95583,
-                        50.37952,
-                        356.01099
-                    ],
-                    [
-                        6.95733,
-                        50.37966,
-                        361.46943
-                    ],
-                    [
-                        6.95772,
-                        50.37981,
-                        362.03681
-                    ],
-                    [
-                        6.959267,
-                        50.380588,
-                        362.10106
-                    ],
-                    [
-                        6.95971,
-                        50.38082,
-                        360.67682
-                    ],
-                    [
-                        6.96022,
-                        50.38097,
-                        360.59157
-                    ],
-                    [
-                        6.9605,
-                        50.38099,
-                        359.23161
-                    ],
-                    [
-                        6.96085,
-                        50.38094,
-                        358.90188
-                    ],
-                    [
-                        6.96113,
-                        50.38075,
-                        360.761
-                    ],
-                    [
-                        6.96135,
-                        50.38016,
-                        365.65971
-                    ],
-                    [
-                        6.96138,
-                        50.37986,
-                        367.60383
-                    ],
-                    [
-                        6.96124,
-                        50.37872,
-                        376.57669
-                    ],
-                    [
-                        6.961272,
-                        50.378406,
-                        377.5907
-                    ],
-                    [
-                        6.961304,
-                        50.378092,
-                        379.08841
-                    ],
-                    [
-                        6.96131,
-                        50.37803,
-                        379.46504
-                    ],
-                    [
-                        6.96145,
-                        50.37728,
-                        384.94614
-                    ],
-                    [
-                        6.96197,
-                        50.37638,
-                        390.46494
-                    ],
-                    [
-                        6.9629,
-                        50.37571,
-                        393.81731
-                    ],
-                    [
-                        6.96409,
-                        50.37523,
-                        396.90626
-                    ],
-                    [
-                        6.9646,
-                        50.37508,
-                        397.22381
-                    ],
-                    [
-                        6.965059,
-                        50.374967,
-                        398.0149
-                    ],
-                    [
-                        6.965518,
-                        50.374853,
-                        399.69643
-                    ],
-                    [
-                        6.96618,
-                        50.37469,
-                        401.97169
-                    ],
-                    [
-                        6.96677,
-                        50.37456,
-                        404.23968
-                    ],
-                    [
-                        6.96706,
-                        50.37453,
-                        404.72984
-                    ],
-                    [
-                        6.967552,
-                        50.374538,
-                        405.62045
-                    ],
-                    [
-                        6.968044,
-                        50.374547,
-                        407.17962
-                    ],
-                    [
-                        6.96822,
-                        50.37455,
-                        408.36418
-                    ],
-                    [
-                        6.968712,
-                        50.374546,
-                        412.94375
-                    ],
-                    [
-                        6.96952,
-                        50.37454,
-                        417.50944
-                    ],
-                    [
-                        6.970009,
-                        50.374504,
-                        419.43326
-                    ],
-                    [
-                        6.970498,
-                        50.374468,
-                        422.23727
-                    ],
-                    [
-                        6.970986,
-                        50.374432,
-                        424.41368
-                    ],
-                    [
-                        6.97115,
-                        50.37442,
-                        425.14451
-                    ],
-                    [
-                        6.971638,
-                        50.374382,
-                        427.56799
-                    ],
-                    [
-                        6.97232,
-                        50.37433,
-                        432.7522
-                    ],
-                    [
-                        6.973,
-                        50.37427,
-                        440.30017
-                    ],
-                    [
-                        6.9736,
-                        50.37416,
-                        443.98794
-                    ],
-                    [
-                        6.974071,
-                        50.37407,
-                        446.61335
-                    ],
-                    [
-                        6.974543,
-                        50.37398,
-                        449.3254
-                    ],
-                    [
-                        6.97522,
-                        50.37385,
-                        453.71949
-                    ],
-                    [
-                        6.9756,
-                        50.37373,
-                        455.76865
-                    ],
-                    [
-                        6.97614,
-                        50.37351,
-                        458.7278
-                    ],
-                    [
-                        6.97721,
-                        50.37295,
-                        465.03275
-                    ],
-                    [
-                        6.97761,
-                        50.3728,
-                        467.69904
-                    ],
-                    [
-                        6.97864,
-                        50.37248,
-                        475.82623
-                    ],
-                    [
-                        6.9793,
-                        50.37231,
-                        479.74205
-                    ],
-                    [
-                        6.97958,
-                        50.37228,
-                        481.8656
-                    ],
-                    [
-                        6.98064,
-                        50.3724,
-                        489.99904
-                    ],
-                    [
-                        6.981077,
-                        50.372544,
-                        493.4303
-                    ],
-                    [
-                        6.981514,
-                        50.372689,
-                        496.72915
-                    ],
-                    [
-                        6.9817,
-                        50.37275,
-                        498.21201
-                    ],
-                    [
-                        6.98224,
-                        50.37295,
-                        502.78604
-                    ],
-                    [
-                        6.982638,
-                        50.373135,
-                        504.92421
-                    ],
-                    [
-                        6.9831,
-                        50.37335,
-                        507.86147
-                    ],
-                    [
-                        6.98372,
-                        50.37364,
-                        511.96214
-                    ],
-                    [
-                        6.98431,
-                        50.37397,
-                        516.26293
-                    ],
-                    [
-                        6.98474,
-                        50.37413,
-                        517.61766
-                    ],
-                    [
-                        6.98508,
-                        50.3742,
-                        518.26722
-                    ],
-                    [
-                        6.985566,
-                        50.37425,
-                        519.82952
-                    ],
-                    [
-                        6.986051,
-                        50.374301,
-                        522.12055
-                    ],
-                    [
-                        6.98614,
-                        50.37431,
-                        522.55682
-                    ],
-                    [
-                        6.987895,
-                        50.374529,
-                        531.50405
-                    ],
-                    [
-                        6.988528,
-                        50.374637,
-                        535.454
-                    ],
-                    [
-                        6.988986,
-                        50.374601,
-                        537.86396
-                    ],
-                    [
-                        6.989126,
-                        50.374524,
-                        538.4147
-                    ],
-                    [
-                        6.989306,
-                        50.374252,
-                        538.06343
-                    ],
-                    [
-                        6.989212,
-                        50.37398,
-                        538.38554
-                    ],
-                    [
-                        6.989013,
-                        50.373783,
-                        539.51522
-                    ],
-                    [
-                        6.988689,
-                        50.373582,
-                        541.18558
-                    ],
-                    [
-                        6.987616,
-                        50.373077,
-                        546.57982
-                    ],
-                    [
-                        6.987009,
-                        50.372726,
-                        550.58043
-                    ],
-                    [
-                        6.985574,
-                        50.37209,
-                        555.83694
-                    ],
-                    [
-                        6.985615,
-                        50.371775,
-                        556.75185
-                    ],
-                    [
-                        6.985757,
-                        50.371686,
-                        556.61786
-                    ],
-                    [
-                        6.986218,
-                        50.371684,
-                        556.12089
-                    ],
-                    [
-                        6.986452,
-                        50.371849,
-                        555.92303
-                    ],
-                    [
-                        6.986685,
-                        50.372194,
-                        555.58132
-                    ],
-                    [
-                        6.987476,
-                        50.372644,
-                        552.74795
-                    ],
-                    [
-                        6.987881,
-                        50.372783,
-                        551.84339
-                    ],
-                    [
-                        6.989705,
-                        50.373159,
-                        556.14768
-                    ],
-                    [
-                        6.991663,
-                        50.373405,
-                        568.39596
-                    ],
-                    [
-                        6.99202,
-                        50.373566,
-                        573.25875
-                    ],
-                    [
-                        6.99202,
-                        50.37357,
-                        573.28282
-                    ],
-                    [
-                        6.992409,
-                        50.373762,
-                        577.89095
-                    ],
-                    [
-                        6.99279,
-                        50.37395,
-                        581.57526
-                    ],
-                    [
-                        6.99361,
-                        50.37458,
-                        590.04239
-                    ],
-                    [
-                        6.99392,
-                        50.37497,
-                        595.62593
-                    ],
-                    [
-                        6.9938,
-                        50.37568,
-                        605.23259
-                    ],
-                    [
-                        6.99388,
-                        50.37591,
-                        607.87127
-                    ],
-                    [
-                        6.99405,
-                        50.37607,
-                        609.47811
-                    ],
-                    [
-                        6.994332,
-                        50.376328,
-                        611.86644
-                    ],
-                    [
-                        6.994614,
-                        50.376586,
-                        613.65549
-                    ],
-                    [
-                        6.99475,
-                        50.37671,
-                        614.20663
-                    ],
-                    [
-                        6.9948,
-                        50.37676,
-                        614.45394
-                    ],
-                    [
-                        6.99486,
-                        50.37681,
-                        614.48253
-                    ],
-                    [
-                        6.9952,
-                        50.37694,
-                        614.39304
-                    ],
-                    [
-                        6.99582,
-                        50.37691,
-                        614.31405
-                    ],
-                    [
-                        6.99667,
-                        50.37663,
-                        614.23023
-                    ],
-                    [
-                        6.99706,
-                        50.37655,
-                        612.40398
-                    ],
-                    [
-                        6.997539,
-                        50.376478,
-                        608.96595
-                    ],
-                    [
-                        6.99806,
-                        50.3764,
-                        606.84957
-                    ],
-                    [
-                        6.99886,
-                        50.37624,
-                        603.54086
-                    ],
-                    [
-                        6.99956,
-                        50.37593,
-                        599.97009
-                    ],
-                    [
-                        7.00036,
-                        50.3753,
-                        594.55014
-                    ],
-                    [
-                        7.00084,
-                        50.37514,
-                        593.45402
-                    ],
-                    [
-                        7.00186,
-                        50.37505,
-                        590.64963
-                    ],
-                    [
-                        7.00221,
-                        50.37491,
-                        587.99844
-                    ],
-                    [
-                        7.00349,
-                        50.37396,
-                        587.10509
-                    ],
-                    [
-                        7.00368,
-                        50.37363,
-                        585.69234
-                    ],
-                    [
-                        7.00362,
-                        50.37327,
-                        583.74046
-                    ],
-                    [
-                        7.00313,
-                        50.37255,
-                        575.83497
-                    ],
-                    [
-                        7.00285,
-                        50.372,
-                        568.10405
-                    ],
-                    [
-                        7.00285,
-                        50.37163,
-                        564.06293
-                    ],
-                    [
-                        7.00315,
-                        50.37138,
-                        560.1653
-                    ],
-                    [
-                        7.00362,
-                        50.37112,
-                        554.74941
-                    ],
-                    [
-                        7.00473,
-                        50.37093,
-                        547.10392
-                    ],
-                    [
-                        7.00523,
-                        50.37077,
-                        543.91888
-                    ],
-                    [
-                        7.00537,
-                        50.37056,
-                        542.17553
-                    ],
-                    [
-                        7.00553,
-                        50.36908,
-                        539.78945
-                    ],
-                    [
-                        7.00539,
-                        50.36889,
-                        541.00421
-                    ],
-                    [
-                        7.00515,
-                        50.36875,
-                        542.24959
-                    ],
-                    [
-                        7.00482,
-                        50.36869,
-                        543.07804
-                    ],
-                    [
-                        7.00382,
-                        50.36871,
-                        543.58532
-                    ],
-                    [
-                        7.00203,
-                        50.3688,
-                        545.17808
-                    ],
-                    [
-                        7.00149,
-                        50.36865,
-                        549.72234
-                    ],
-                    [
-                        7.00133,
-                        50.36852,
-                        550.91474
-                    ],
-                    [
-                        7.00114,
-                        50.36808,
-                        553.62686
-                    ],
-                    [
-                        7.00094,
-                        50.36786,
-                        553.78144
-                    ],
-                    [
-                        7.00001,
-                        50.3671,
-                        553.19842
-                    ],
-                    [
-                        6.99951,
-                        50.36628,
-                        543.58612
-                    ],
-                    [
-                        6.99963,
-                        50.36413,
-                        532.89871
-                    ],
-                    [
-                        6.99961,
-                        50.36382,
-                        533.56548
-                    ],
-                    [
-                        6.9993,
-                        50.36352,
-                        534.34898
-                    ],
-                    [
-                        6.9987,
-                        50.36315,
-                        539.27983
-                    ],
-                    [
-                        6.99693,
-                        50.36278,
-                        542.99194
-                    ],
-                    [
-                        6.99602,
-                        50.3622,
-                        540.42446
-                    ],
-                    [
-                        6.99532,
-                        50.36169,
-                        538.68127
-                    ],
-                    [
-                        6.99415,
-                        50.36025,
-                        535.94327
-                    ],
-                    [
-                        6.9935,
-                        50.35984,
-                        535.1097
-                    ],
-                    [
-                        6.99275,
-                        50.35959,
-                        532.91415
-                    ],
-                    [
-                        6.99176,
-                        50.35911,
-                        532.0826
-                    ],
-                    [
-                        6.99112,
-                        50.35894,
-                        530.54138
-                    ],
-                    [
-                        6.98944,
-                        50.35868,
-                        528.56437
-                    ],
-                    [
-                        6.98761,
-                        50.35825,
-                        531.70593
-                    ],
-                    [
-                        6.98641,
-                        50.35812,
-                        534.31656
-                    ],
-                    [
-                        6.98612,
-                        50.35812,
-                        534.82187
-                    ],
-                    [
-                        6.98566,
-                        50.35821,
-                        535.20681
-                    ],
-                    [
-                        6.98432,
-                        50.35886,
-                        539.98646
-                    ],
-                    [
-                        6.98368,
-                        50.35894,
-                        542.92757
-                    ],
-                    [
-                        6.98318,
-                        50.35881,
-                        544.986
-                    ],
-                    [
-                        6.9825,
-                        50.35854,
-                        547.16221
-                    ],
-                    [
-                        6.98164,
-                        50.35815,
-                        547.72337
-                    ],
-                    [
-                        6.9812,
-                        50.35786,
-                        548.24993
-                    ],
-                    [
-                        6.98118,
-                        50.35763,
-                        549.16871
-                    ],
-                    [
-                        6.98131,
-                        50.35746,
-                        549.76865
-                    ],
-                    [
-                        6.9822,
-                        50.35693,
-                        549.74258
-                    ],
-                    [
-                        6.98257,
-                        50.3568,
-                        549.64776
-                    ],
-                    [
-                        6.98366,
-                        50.35653,
-                        548.97615
-                    ],
-                    [
-                        6.98533,
-                        50.35617,
-                        553.10229
-                    ],
-                    [
-                        6.9857,
-                        50.35588,
-                        556.96152
-                    ],
-                    [
-                        6.98601,
-                        50.35553,
-                        559.41113
-                    ],
-                    [
-                        6.9863,
-                        50.35493,
-                        560.88502
-                    ],
-                    [
-                        6.98636,
-                        50.35468,
-                        560.31739
-                    ],
-                    [
-                        6.98636,
-                        50.35448,
-                        559.39043
-                    ],
-                    [
-                        6.98619,
-                        50.35407,
-                        556.70067
-                    ],
-                    [
-                        6.98583,
-                        50.35371,
-                        553.96495
-                    ],
-                    [
-                        6.98524,
-                        50.3534,
-                        552.91732
-                    ],
-                    [
-                        6.98423,
-                        50.35306,
-                        553.12411
-                    ],
-                    [
-                        6.98305,
-                        50.35265,
-                        550.51925
-                    ],
-                    [
-                        6.981288,
-                        50.351968,
-                        549.91503
-                    ],
-                    [
-                        6.980445,
-                        50.351644,
-                        548.59394
-                    ],
-                    [
-                        6.980024,
-                        50.351482,
-                        548.09745
-                    ],
-                    [
-                        6.97825,
-                        50.3508,
-                        547.60428
-                    ],
-                    [
-                        6.97413,
-                        50.34922,
-                        547.73503
-                    ],
-                    [
-                        6.9716,
-                        50.34823,
-                        550.85745
-                    ],
-                    [
-                        6.971184,
-                        50.348063,
-                        551.70117
-                    ],
-                    [
-                        6.970767,
-                        50.347895,
-                        552.90499
-                    ],
-                    [
-                        6.970351,
-                        50.347728,
-                        554.35528
-                    ],
-                    [
-                        6.969935,
-                        50.34756,
-                        555.85912
-                    ],
-                    [
-                        6.969518,
-                        50.347393,
-                        557.29524
-                    ],
-                    [
-                        6.969102,
-                        50.347225,
-                        558.89594
-                    ],
-                    [
-                        6.96894,
-                        50.34716,
-                        559.50177
-                    ],
-                    [
-                        6.968523,
-                        50.346993,
-                        561.04956
-                    ],
-                    [
-                        6.968106,
-                        50.346826,
-                        562.60549
-                    ],
-                    [
-                        6.96769,
-                        50.346659,
-                        564.13385
-                    ],
-                    [
-                        6.967273,
-                        50.346492,
-                        565.65049
-                    ],
-                    [
-                        6.966856,
-                        50.346325,
-                        567.12613
-                    ],
-                    [
-                        6.966439,
-                        50.346158,
-                        568.57203
-                    ],
-                    [
-                        6.966023,
-                        50.345991,
-                        569.99372
-                    ],
-                    [
-                        6.96577,
-                        50.34589,
-                        570.79317
-                    ],
-                    [
-                        6.965355,
-                        50.345721,
-                        571.92397
-                    ],
-                    [
-                        6.96494,
-                        50.345553,
-                        573.0575
-                    ],
-                    [
-                        6.964524,
-                        50.345384,
-                        574.09898
-                    ],
-                    [
-                        6.964109,
-                        50.345216,
-                        575.23364
-                    ],
-                    [
-                        6.96343,
-                        50.34494,
-                        576.93168
-                    ],
-                    [
-                        6.963016,
-                        50.34477,
-                        577.94267
-                    ],
-                    [
-                        6.962603,
-                        50.3446,
-                        578.59022
-                    ],
-                    [
-                        6.962189,
-                        50.34443,
-                        579.12533
-                    ],
-                    [
-                        6.96129,
-                        50.34406,
-                        580.35804
-                    ],
-                    [
-                        6.95978,
-                        50.34343,
-                        583.13621
-                    ],
-                    [
-                        6.95902,
-                        50.34301,
-                        583.45243
-                    ],
-                    [
-                        6.95626,
-                        50.34088,
-                        586.48194
-                    ],
-                    [
-                        6.95591,
-                        50.34056,
-                        588.80542
-                    ],
-                    [
-                        6.955413,
-                        50.339897,
-                        593.59383
-                    ],
-                    [
-                        6.955005,
-                        50.339567,
-                        596.29938
-                    ],
-                    [
-                        6.954026,
-                        50.338966,
-                        604.15223
-                    ],
-                    [
-                        6.953667,
-                        50.338682,
-                        606.58727
-                    ],
-                    [
-                        6.953259,
-                        50.33816,
-                        608.61305
-                    ],
-                    [
-                        6.952862,
-                        50.338098,
-                        610.86748
-                    ],
-                    [
-                        6.952181,
-                        50.338101,
-                        614.38474
-                    ],
-                    [
-                        6.951663,
-                        50.337915,
-                        612.18423
-                    ],
-                    [
-                        6.950287,
-                        50.33724,
-                        618.18195
-                    ],
-                    [
-                        6.947318,
-                        50.335289,
-                        614.33618
-                    ],
-                    [
-                        6.946342,
-                        50.334681,
-                        614.31322
-                    ],
-                    [
-                        6.945328,
-                        50.333991,
-                        613.87485
-                    ]
-                ]
-            },
-            "bbox": [
-                6.91997,
-                50.329233,
-                7.00553,
-                50.38099
-            ]
-        }
-    ]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [6.9497374, 50.3380943],
+          [6.949646, 50.33838],
+          [6.948654, 50.3392],
+          [6.948356, 50.339324],
+          [6.94808, 50.339291],
+          [6.947761, 50.339072],
+          [6.94691, 50.3381],
+          [6.94668, 50.33796],
+          [6.94571, 50.33756],
+          [6.9449, 50.33735],
+          [6.94414, 50.33736],
+          [6.94392, 50.33741],
+          [6.943485, 50.337556],
+          [6.943049, 50.337702],
+          [6.94258, 50.33786],
+          [6.9424, 50.33791],
+          [6.94152, 50.33806],
+          [6.94063, 50.33813],
+          [6.93984, 50.33814],
+          [6.93912, 50.33796],
+          [6.93886, 50.33797],
+          [6.93816, 50.33828],
+          [6.93758, 50.33894],
+          [6.93662, 50.33941],
+          [6.93622, 50.33994],
+          [6.93603, 50.34001],
+          [6.93402, 50.34022],
+          [6.93376, 50.3403],
+          [6.93356, 50.34053],
+          [6.93345, 50.34102],
+          [6.93312, 50.34131],
+          [6.93097, 50.34228],
+          [6.93005, 50.34267],
+          [6.92915, 50.34309],
+          [6.92889, 50.34324],
+          [6.9285, 50.34354],
+          [6.928188, 50.343783],
+          [6.927877, 50.344027],
+          [6.92731, 50.34447],
+          [6.927005, 50.344717],
+          [6.9267, 50.344964],
+          [6.926395, 50.34521],
+          [6.92626, 50.34532],
+          [6.92593, 50.34576],
+          [6.925828, 50.346145],
+          [6.92583, 50.3467],
+          [6.92656, 50.34788],
+          [6.92676, 50.3486],
+          [6.92692, 50.34932],
+          [6.92695, 50.34963],
+          [6.92671, 50.3513],
+          [6.92634, 50.35223],
+          [6.92616, 50.35252],
+          [6.92594, 50.35285],
+          [6.925736, 50.353136],
+          [6.925532, 50.353422],
+          [6.925328, 50.353709],
+          [6.92512, 50.354],
+          [6.924937, 50.354292],
+          [6.924754, 50.354584],
+          [6.9247, 50.35467],
+          [6.92435, 50.35524],
+          [6.92405, 50.35568],
+          [6.92377, 50.35598],
+          [6.92313, 50.35645],
+          [6.92257, 50.35672],
+          [6.92214, 50.35687],
+          [6.9217, 50.357],
+          [6.921251, 50.357128],
+          [6.920801, 50.357256],
+          [6.92054, 50.35733],
+          [6.92028, 50.35742],
+          [6.92002, 50.35764],
+          [6.91997, 50.35793],
+          [6.92033, 50.35829],
+          [6.92089, 50.35845],
+          [6.92151, 50.35861],
+          [6.921963, 50.358732],
+          [6.922417, 50.358854],
+          [6.92255, 50.35889],
+          [6.92332, 50.35911],
+          [6.92396, 50.35936],
+          [6.92465, 50.35977],
+          [6.92582, 50.3603],
+          [6.92639, 50.36067],
+          [6.926727, 50.360899],
+          [6.927063, 50.361129],
+          [6.92708, 50.36114],
+          [6.92839, 50.36187],
+          [6.92916, 50.3624],
+          [6.92946, 50.36267],
+          [6.9298, 50.36314],
+          [6.9304, 50.36411],
+          [6.93042, 50.36429],
+          [6.93041, 50.36447],
+          [6.930395, 50.364784],
+          [6.93038, 50.36511],
+          [6.93048, 50.36536],
+          [6.93075, 50.36558],
+          [6.93145, 50.36592],
+          [6.93161, 50.36614],
+          [6.93162, 50.36635],
+          [6.93121, 50.36668],
+          [6.93126, 50.367],
+          [6.93176, 50.36734],
+          [6.93344, 50.36818],
+          [6.93395, 50.36851],
+          [6.93464, 50.36901],
+          [6.93648, 50.37015],
+          [6.93683, 50.37044],
+          [6.93755, 50.3711],
+          [6.93771, 50.37152],
+          [6.93767, 50.37191],
+          [6.93732, 50.37276],
+          [6.93707, 50.37309],
+          [6.93662, 50.37325],
+          [6.93562, 50.3733],
+          [6.93428, 50.37386],
+          [6.93371, 50.37418],
+          [6.93364, 50.37432],
+          [6.93369, 50.37455],
+          [6.93386, 50.37469],
+          [6.934, 50.37474],
+          [6.93448, 50.3749],
+          [6.934915, 50.375047],
+          [6.935351, 50.375193],
+          [6.93549, 50.37524],
+          [6.9360064, 50.3755308],
+          [6.93655, 50.37582],
+          [6.93668, 50.37596],
+          [6.93693, 50.37668],
+          [6.93736, 50.37715],
+          [6.93783, 50.37756],
+          [6.93836, 50.37776],
+          [6.9389, 50.37785],
+          [6.9399, 50.37772],
+          [6.94055, 50.37747],
+          [6.940952, 50.377289],
+          [6.941354, 50.377107],
+          [6.941756, 50.376926],
+          [6.94208, 50.37678],
+          [6.94229, 50.37667],
+          [6.94261, 50.37624],
+          [6.94283, 50.3761],
+          [6.94318, 50.37612],
+          [6.94367, 50.37655],
+          [6.94434, 50.37669],
+          [6.94483, 50.376719],
+          [6.94567, 50.37677],
+          [6.946162, 50.376782],
+          [6.946653, 50.376794],
+          [6.947145, 50.376805],
+          [6.94733, 50.37681],
+          [6.947811, 50.376743],
+          [6.948291, 50.376676],
+          [6.948772, 50.376609],
+          [6.94891, 50.37659],
+          [6.94945, 50.37656],
+          [6.9498, 50.37669],
+          [6.95029, 50.37726],
+          [6.95037, 50.37761],
+          [6.95034, 50.37817],
+          [6.95041, 50.37833],
+          [6.95068, 50.37848],
+          [6.951126, 50.378613],
+          [6.951572, 50.378746],
+          [6.95162, 50.37876],
+          [6.95241, 50.37895],
+          [6.952884, 50.379034],
+          [6.95343, 50.37913],
+          [6.953905, 50.379211],
+          [6.954381, 50.379292],
+          [6.954856, 50.379374],
+          [6.95501, 50.3794],
+          [6.95583, 50.37952],
+          [6.95733, 50.37966],
+          [6.95772, 50.37981],
+          [6.959267, 50.380588],
+          [6.95971, 50.38082],
+          [6.96022, 50.38097],
+          [6.9605, 50.38099],
+          [6.96085, 50.38094],
+          [6.96113, 50.38075],
+          [6.96135, 50.38016],
+          [6.96138, 50.37986],
+          [6.96124, 50.37872],
+          [6.961272, 50.378406],
+          [6.961304, 50.378092],
+          [6.96131, 50.37803],
+          [6.96145, 50.37728],
+          [6.96197, 50.37638],
+          [6.9629, 50.37571],
+          [6.96409, 50.37523],
+          [6.9646, 50.37508],
+          [6.965059, 50.374967],
+          [6.965518, 50.374853],
+          [6.96618, 50.37469],
+          [6.96677, 50.37456],
+          [6.96706, 50.37453],
+          [6.967552, 50.374538],
+          [6.968044, 50.374547],
+          [6.96822, 50.37455],
+          [6.968712, 50.374546],
+          [6.96952, 50.37454],
+          [6.970009, 50.374504],
+          [6.970498, 50.374468],
+          [6.970986, 50.374432],
+          [6.97115, 50.37442],
+          [6.971638, 50.374382],
+          [6.97232, 50.37433],
+          [6.973, 50.37427],
+          [6.9736, 50.37416],
+          [6.974071, 50.37407],
+          [6.974543, 50.37398],
+          [6.97522, 50.37385],
+          [6.9756, 50.37373],
+          [6.97614, 50.37351],
+          [6.97721, 50.37295],
+          [6.97761, 50.3728],
+          [6.97864, 50.37248],
+          [6.9793, 50.37231],
+          [6.97958, 50.37228],
+          [6.98064, 50.3724],
+          [6.981077, 50.372544],
+          [6.981514, 50.372689],
+          [6.9817, 50.37275],
+          [6.98224, 50.37295],
+          [6.982638, 50.373135],
+          [6.9831, 50.37335],
+          [6.98372, 50.37364],
+          [6.98431, 50.37397],
+          [6.98474, 50.37413],
+          [6.98508, 50.3742],
+          [6.985566, 50.37425],
+          [6.986051, 50.374301],
+          [6.98614, 50.37431],
+          [6.987895, 50.374529],
+          [6.988528, 50.374637],
+          [6.988986, 50.374601],
+          [6.989126, 50.374524],
+          [6.989306, 50.374252],
+          [6.989212, 50.37398],
+          [6.989013, 50.373783],
+          [6.988689, 50.373582],
+          [6.987616, 50.373077],
+          [6.987009, 50.372726],
+          [6.985574, 50.37209],
+          [6.985615, 50.371775],
+          [6.985757, 50.371686],
+          [6.986218, 50.371684],
+          [6.986452, 50.371849],
+          [6.986685, 50.372194],
+          [6.987476, 50.372644],
+          [6.987881, 50.372783],
+          [6.989705, 50.373159],
+          [6.991663, 50.373405],
+          [6.99202, 50.373566],
+          [6.99202, 50.37357],
+          [6.992409, 50.373762],
+          [6.99279, 50.37395],
+          [6.99361, 50.37458],
+          [6.99392, 50.37497],
+          [6.9938, 50.37568],
+          [6.99388, 50.37591],
+          [6.99405, 50.37607],
+          [6.994332, 50.376328],
+          [6.994614, 50.376586],
+          [6.99475, 50.37671],
+          [6.9948, 50.37676],
+          [6.99486, 50.37681],
+          [6.9952, 50.37694],
+          [6.99582, 50.37691],
+          [6.99667, 50.37663],
+          [6.99706, 50.37655],
+          [6.997539, 50.376478],
+          [6.99806, 50.3764],
+          [6.99886, 50.37624],
+          [6.99956, 50.37593],
+          [7.00036, 50.3753],
+          [7.00084, 50.37514],
+          [7.00186, 50.37505],
+          [7.00221, 50.37491],
+          [7.00349, 50.37396],
+          [7.00368, 50.37363],
+          [7.00362, 50.37327],
+          [7.00313, 50.37255],
+          [7.00285, 50.372],
+          [7.00285, 50.37163],
+          [7.00315, 50.37138],
+          [7.00362, 50.37112],
+          [7.00473, 50.37093],
+          [7.00523, 50.37077],
+          [7.00537, 50.37056],
+          [7.00553, 50.36908],
+          [7.00539, 50.36889],
+          [7.00515, 50.36875],
+          [7.00482, 50.36869],
+          [7.00382, 50.36871],
+          [7.00203, 50.3688],
+          [7.00149, 50.36865],
+          [7.00133, 50.36852],
+          [7.00114, 50.36808],
+          [7.00094, 50.36786],
+          [7.00001, 50.3671],
+          [6.99951, 50.36628],
+          [6.99963, 50.36413],
+          [6.99961, 50.36382],
+          [6.9993, 50.36352],
+          [6.9987, 50.36315],
+          [6.99693, 50.36278],
+          [6.99602, 50.3622],
+          [6.99532, 50.36169],
+          [6.99415, 50.36025],
+          [6.9935, 50.35984],
+          [6.99275, 50.35959],
+          [6.99176, 50.35911],
+          [6.99112, 50.35894],
+          [6.98944, 50.35868],
+          [6.98761, 50.35825],
+          [6.98641, 50.35812],
+          [6.98612, 50.35812],
+          [6.98566, 50.35821],
+          [6.98432, 50.35886],
+          [6.98368, 50.35894],
+          [6.98318, 50.35881],
+          [6.9825, 50.35854],
+          [6.98164, 50.35815],
+          [6.9812, 50.35786],
+          [6.98118, 50.35763],
+          [6.98131, 50.35746],
+          [6.9822, 50.35693],
+          [6.98257, 50.3568],
+          [6.98366, 50.35653],
+          [6.98533, 50.35617],
+          [6.9857, 50.35588],
+          [6.98601, 50.35553],
+          [6.9863, 50.35493],
+          [6.98636, 50.35468],
+          [6.98636, 50.35448],
+          [6.98619, 50.35407],
+          [6.98583, 50.35371],
+          [6.98524, 50.3534],
+          [6.98423, 50.35306],
+          [6.98305, 50.35265],
+          [6.981288, 50.351968],
+          [6.980445, 50.351644],
+          [6.980024, 50.351482],
+          [6.97825, 50.3508],
+          [6.97413, 50.34922],
+          [6.9716, 50.34823],
+          [6.971184, 50.348063],
+          [6.970767, 50.347895],
+          [6.970351, 50.347728],
+          [6.969935, 50.34756],
+          [6.969518, 50.347393],
+          [6.969102, 50.347225],
+          [6.96894, 50.34716],
+          [6.968523, 50.346993],
+          [6.968106, 50.346826],
+          [6.96769, 50.346659],
+          [6.967273, 50.346492],
+          [6.966856, 50.346325],
+          [6.966439, 50.346158],
+          [6.966023, 50.345991],
+          [6.96577, 50.34589],
+          [6.965355, 50.345721],
+          [6.96494, 50.345553],
+          [6.964524, 50.345384],
+          [6.964109, 50.345216],
+          [6.96343, 50.34494],
+          [6.963016, 50.34477],
+          [6.962603, 50.3446],
+          [6.962189, 50.34443],
+          [6.96129, 50.34406],
+          [6.95978, 50.34343],
+          [6.95902, 50.34301],
+          [6.95626, 50.34088],
+          [6.95591, 50.34056],
+          [6.955413, 50.339897],
+          [6.955005, 50.339567],
+          [6.954026, 50.338966],
+          [6.953667, 50.338682],
+          [6.953259, 50.33816],
+          [6.952862, 50.338098],
+          [6.952181, 50.338101],
+          [6.951663, 50.337915],
+          [6.9506442, 50.3374065],
+          [6.9498747, 50.3369652],
+          [6.9434188, 50.3327638],
+          [6.9427888, 50.3324064],
+          [6.9415427, 50.3318393],
+          [6.9412255, 50.3317172],
+          [6.9410795, 50.3317301],
+          [6.9409839, 50.331804],
+          [6.9408127, 50.3322057],
+          [6.9406717, 50.3322218],
+          [6.9403394, 50.3320772],
+          [6.9401179, 50.3319197],
+          [6.9399165, 50.3316818],
+          [6.9397906, 50.3312865],
+          [6.9396658, 50.3308377],
+          [6.9395342, 50.330406],
+          [6.9393247, 50.3299933],
+          [6.9390075, 50.3293591],
+          [6.9387866, 50.3288941],
+          [6.9386778, 50.3286856],
+          [6.9387108, 50.3283935],
+          [6.9388901, 50.3281947],
+          [6.9393335, 50.327999],
+          [6.9402188, 50.3277215],
+          [6.9404229, 50.3275911],
+          [6.9404867, 50.3274404],
+          [6.9404421, 50.3272816],
+          [6.9403017, 50.3271471],
+          [6.940072, 50.3270453],
+          [6.9385724, 50.3265164],
+          [6.9378131, 50.3261783],
+          [6.9370156, 50.3257262],
+          [6.9363583, 50.3252658],
+          [6.9357011, 50.3246874],
+          [6.9350502, 50.3240112],
+          [6.9347631, 50.3239379],
+          [6.9344058, 50.3239949],
+          [6.9341761, 50.3241416],
+          [6.9341378, 50.3243738],
+          [6.9342781, 50.3245571],
+          [6.9366045, 50.3260311],
+          [6.937137, 50.3263829],
+          [6.9373081, 50.3266378],
+          [6.9373525, 50.3269089],
+          [6.9373341, 50.3270732],
+          [6.937291, 50.327184],
+          [6.9371412, 50.3275048],
+          [6.9370946, 50.3277067],
+          [6.9371344, 50.3279624],
+          [6.937323, 50.328366],
+          [6.9387807, 50.3313033],
+          [6.9387777, 50.3314298],
+          [6.9386944, 50.3315653],
+          [6.9384634, 50.3316837],
+          [6.9366981, 50.3321856],
+          [6.9364907, 50.3323158],
+          [6.9363783, 50.3324841],
+          [6.9363488, 50.3326963],
+          [6.9363945, 50.3328645],
+          [6.9365632, 50.3330396],
+          [6.9396658, 50.3354262],
+          [6.9400497, 50.3356223],
+          [6.9405707, 50.3357588],
+          [6.9417004, 50.3359513],
+          [6.9460623, 50.3366871],
+          [6.9460935, 50.3367326],
+          [6.9460222, 50.3369457],
+          [6.9460623, 50.3370395],
+          [6.9462003, 50.3371219],
+          [6.9467614, 50.3372896],
+          [6.9471672, 50.3373926],
+          [6.9475462, 50.337461],
+          [6.9493132, 50.3377212],
+          [6.9496097, 50.3378921],
+          [6.9497374, 50.3380943]
+        ]
+      },
+      "properties": {
+        "id": 1071,
+        "shape": "Line",
+        "name": "tracklayout"
+      }
+    }
+  ]
 }

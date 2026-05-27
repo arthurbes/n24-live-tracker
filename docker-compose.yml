@@ -1,0 +1,53 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile-node
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - REPLAY_MODE=${REPLAY_MODE}
+      - LOG_LEVEL=info
+      - API_BASE_URL=http://frontend:5173
+    volumes:
+      - ./backend/replays:/app/backend/replays
+    ports:
+      - "3001:3001"
+    healthcheck:
+      test: ["CMD", "node", "src/index.js", "test:healthcheck"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    container_name: backend
+    user: "root"
+
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile-frontend
+    env_file:
+      - .env
+    environment:
+      - VITE_PORT=5173
+      - VITE_BASE_URL=http://localhost
+      - VITE_MAPBOX_TOKEN=${MAPBOX_TOKEN}
+      - VITE_MAPBOX_STYLE=${MAPBOX_STYLE}
+      - VITE_ENABLED_CLASSES=${ENABLED_CLASSES}
+      - VITE_STREAMURL=${STREAMURL}
+    volumes:
+      - ./frontend:/app/frontend
+      - /app/frontend/node_modules
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    container_name: frontend
+    user: "root"
+volumes:
+  backend_data:
+  replays_data:

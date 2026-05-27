@@ -13,6 +13,7 @@ function App() {
   const [cars, setCars] = useState([]);
   const [filter, setFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [enabledClasses, setEnabledClasses] = useState(import.meta.env.VITE_ENABLED_CLASSES.split(',').map(c => c.trim()));
   const [hoveredCarId, setHoveredCarId] = useState(null);
   const [code60Sectors, setCode60Sectors] = useState([]);
   const [leaderboardMode, setLeaderboardMode] = useState(0);
@@ -46,8 +47,7 @@ function App() {
     };
   }, []);
 
-  const availableClasses = ['All', ...new Set(cars.map(c => c.class))].filter(Boolean).slice(0, 6);
-
+  const availableClasses = ['All', ...new Set(cars.map(c => c.class))].filter(Boolean).filter(c => c === 'All' || enabledClasses.includes(c));
   const filteredCars = cars.filter(car => {
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
@@ -115,14 +115,14 @@ function App() {
         </nav>
       </header>
 
-      <main className="flex-grow relative w-full h-screen pt-[60px] md:pt-[72px] pb-[80px] md:pb-0 overflow-hidden">
+      <main className="flex-grow relative w-full h-screen pb-[80px] md:pb-0 overflow-hidden">
         <Map
           initialViewState={{
             longitude: 6.9475,
             latitude: 50.3341,
             zoom: 12
           }}
-          mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
+          mapStyle={import.meta.env.VITE_MAPBOX_STYLE}
           mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
         >
           <Source id="track" type="geojson" data={trackData}>
@@ -209,7 +209,7 @@ function App() {
         <aside className="absolute top-20 bottom-8 left-margin-desktop w-[450px] z-10 flex flex-col bg-surface-container-highest/90 backdrop-blur-2xl border-t border-l border-white/10 border-r border-b border-black/50 rounded-lg overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] pointer-events-none md:pointer-events-auto">
           <div className="px-widget-padding py-4 border-b border-white/10 bg-surface-container-low/50 flex justify-between items-center">
             <div>
-              <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight uppercase">TOP 10 LEADERBOARD</h2>
+              <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight uppercase">LEADERBOARD</h2>
             </div>
           </div>
           <div className="flex-grow overflow-y-auto custom-scrollbar">
@@ -225,7 +225,7 @@ function App() {
                 </tr>
               </thead>
               <tbody className="font-body-fixed text-body-fixed text-sm">
-                {sortedFilteredCars.slice(0, 10).map((car) => (
+                {sortedFilteredCars.map((car) => (
                   <tr 
                     key={car.id} 
                     className={`border-b border-white/5 transition-colors border-l-4 group cursor-pointer ${hoveredCarId === car.id ? 'bg-white/10 border-l-primary' : 'hover:bg-white/5 border-transparent'}`}
@@ -300,6 +300,18 @@ function App() {
             </div>
           </div>
         </div>
+        {/* Stream Overlay */}
+        {import.meta.env.VITE_STREAMURL && import.meta.env.VITE_STREAMURL.trim() !== '' && (
+        <div className="absolute bottom-10 right-margin-desktop z-10 w-[80vw] md:w-[20vw] aspect-video bg-black/80 border border-white/20 rounded-lg overflow-hidden shadow-lg">
+         <iframe
+            src={import.meta.env.VITE_STREAMURL}
+            title="Live Stream"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          ></iframe>
+        </div>
+        )}
       </main>
 
       <div className="hidden md:flex fixed top-24 left-1/2 -translate-x-1/2 z-20 items-center gap-2 bg-surface-container-low/60 backdrop-blur-md p-1.5 rounded-full border border-white/10 shadow-lg">

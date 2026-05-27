@@ -111,6 +111,26 @@
             linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         background-size: 50px 50px;
     }
+    ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0,0,0,0.1);
+    -webkit-border-radius: 100px;
+    }
+
+    ::-webkit-scrollbar:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.5);
+        -webkit-border-radius: 100px;
+    }
+    ::-webkit-scrollbar-thumb:active {
+        background: rgba(0,0,0,0.61);
+        -webkit-border-radius: 100px;
+    }
+
   </style>
 </head>
 <body class="text-on-background min-h-screen overflow-hidden flex flex-col font-body-fixed text-body-fixed selection:bg-secondary-container selection:text-on-secondary-container">
