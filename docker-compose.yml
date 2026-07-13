@@ -36,7 +36,6 @@ services:
       - VITE_BASE_URL=http://localhost
       - VITE_MAPBOX_TOKEN=${MAPBOX_TOKEN}
       - VITE_MAPBOX_STYLE=${MAPBOX_STYLE}
-      - VITE_ENABLED_CLASSES=${ENABLED_CLASSES}
       - VITE_STREAMURL=${STREAMURL}
     volumes:
       - ./frontend:/app/frontend
