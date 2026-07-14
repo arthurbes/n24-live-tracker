@@ -196,6 +196,7 @@ function App() {
             </Marker>
           ))}
         </Map>
+        
         {/* Popup for available classes */}
         {showPopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -307,6 +308,7 @@ function App() {
 
         </div>
       )}
+      
         {/* Sidebar - Leaderboard */}
         <aside className="absolute top-5 bottom-10 left-margin-desktop w-[450px] z-10 flex flex-col bg-surface-container-low/60 backdrop-blur-md border border-white/10 rounded-full overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] pointer-events-none hidden md:flex md:pointer-events-auto">
           <div className="px-widget-padding py-4 border-b border-white/10 flex justify-between items-center">
@@ -455,6 +457,7 @@ function App() {
         </button>
 
       </div>
+      
     </>
   );
 }
