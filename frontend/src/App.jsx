@@ -3,6 +3,8 @@ import Map, { Marker, Source, Layer } from 'react-map-gl';
 import { io } from 'socket.io-client';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import trackData from './nurburgring_geojson.json';
+import nlsData from './langstrecken_geojson.json';
+import gpData from './grandprix_geojson.json';
 import cornersData from './corners.json';
 import sectorsData from './sectors.json';
 import * as turf from '@turf/turf';
@@ -77,7 +79,17 @@ function App() {
   });
 
   const trackLengthKm = 25.378;
-  const trackLine = trackData.features ? trackData.features[0] : trackData;
+  const trackLayout = localStorage.getItem('trackLayout') || 'N24';
+  let trackLine;
+
+  if (trackLayout === 'NLS') {
+    trackLine = nlsData.features ? nlsData.features[0] : nlsData;
+  } else if (trackLayout === 'GP') {
+    trackLine = gpData.features ? gpData.features[0] : gpData;
+  } else {
+    // Default to N24
+    trackLine = trackData.features ? trackData.features[0] : trackData;
+  }
 
   // May 16, 2026, 10:00 BRT = May 16, 13:00 UTC. Race ends 24h later = May 17, 13:00 UTC
   const raceEndTime = new Date("2026-05-17T13:00:00Z").getTime();
@@ -116,7 +128,7 @@ function App() {
           mapStyle={import.meta.env.VITE_MAPBOX_STYLE}
           mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
         >
-          <Source id="track" type="geojson" data={trackData}>
+          <Source id="track" type="geojson" data={trackLine}>
             <Layer
               id="track-line"
               type="line"
@@ -200,7 +212,7 @@ function App() {
         {/* Popup for available classes */}
         {showPopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="backdrop-blur-lg bg-opacity-8 p-6 rounded-lg">
+          <div className="backdrop-blur-lg bg-opacity-8 border border-white/10 p-6 rounded-full">
             <div className="flex justify-between items-start mb-4">
               {/* Title */}
               <h3 className="font-headline-md text-headline-md text-secondary-container">Available Classes:</h3>
@@ -301,12 +313,45 @@ function App() {
                 </button>
                 </div>
               </div>
+              <div className="mb-5"> Track lay-out
+                <div className="flex gap-2 mt-2">
+                  <button
+                    onClick={() => localStorage.setItem('trackLayout', 'N24')}
+                    className={`px-3 py-1 border rounded-md text-xs ${
+                      localStorage.getItem('trackLayout') === 'N24'
+                        ? 'bg-primary text-on-primary border-primary'
+                        : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
+                    }`}
+                  >
+                    N24
+                  </button>
+                  <button
+                    onClick={() => localStorage.setItem('trackLayout', 'NLS')}
+                    className={`px-3 py-1 border rounded-md text-xs ${
+                      localStorage.getItem('trackLayout') === 'NLS'
+                        ? 'bg-primary text-on-primary border-primary'
+                        : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
+                    }`}
+                  >
+                    NLS
+                  </button>
+                  <button
+                    onClick={() => localStorage.setItem('trackLayout', 'GP')}
+                    className={`px-3 py-1 border rounded-md text-xs ${
+                      localStorage.getItem('trackLayout') === 'GP'
+                        ? 'bg-primary text-on-primary border-primary'
+                        : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
+                    }`}
+                  >
+                    GP
+                  </button>
+                </div>
+              </div>
+              </div>
               </div>
             </div>
 
           </div>
-
-        </div>
       )}
       
         {/* Sidebar - Leaderboard */}
