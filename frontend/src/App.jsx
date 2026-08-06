@@ -23,6 +23,22 @@ function App() {
       localStorage.setItem('enabledClasses', JSON.stringify(enabledClasses));
     }
   }, [enabledClasses]);
+  useEffect(() => {
+    socket.emit('setTrackLayout', trackLayout);
+
+  const handleLayoutChange = (layout) => {
+    setTrackLayout(layout);
+    localStorage.setItem('trackLayout', layout);
+  };
+
+  socket.on('trackLayoutChanged', handleLayoutChange);
+
+  return () => {
+    socket.off('trackLayoutChanged', handleLayoutChange);
+  };
+}, []); // run once on mount
+  const [trackLayout, setTrackLayout] = useState(
+  () => localStorage.getItem('trackLayout') || 'N24');
   const [hoveredCarId, setHoveredCarId] = useState(null);
   const [code60Sectors, setCode60Sectors] = useState([]);
   const [leaderboardMode, setLeaderboardMode] = useState(0);
@@ -79,7 +95,6 @@ function App() {
   });
 
   const trackLengthKm = 25.378;
-  const trackLayout = localStorage.getItem('trackLayout') || 'N24';
   let trackLine;
 
   if (trackLayout === 'NLS') {
@@ -313,40 +328,68 @@ function App() {
                 </button>
                 </div>
               </div>
-              <div className="mb-5"> Track lay-out
-                <div className="flex gap-2 mt-2">
-                  <button
-                    onClick={() => localStorage.setItem('trackLayout', 'N24')}
-                    className={`px-3 py-1 border rounded-md text-xs ${
-                      localStorage.getItem('trackLayout') === 'N24'
-                        ? 'bg-primary text-on-primary border-primary'
-                        : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
-                    }`}
-                  >
-                    N24
-                  </button>
-                  <button
-                    onClick={() => localStorage.setItem('trackLayout', 'NLS')}
-                    className={`px-3 py-1 border rounded-md text-xs ${
-                      localStorage.getItem('trackLayout') === 'NLS'
-                        ? 'bg-primary text-on-primary border-primary'
-                        : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
-                    }`}
-                  >
-                    NLS
-                  </button>
-                  <button
-                    onClick={() => localStorage.setItem('trackLayout', 'GP')}
-                    className={`px-3 py-1 border rounded-md text-xs ${
-                      localStorage.getItem('trackLayout') === 'GP'
-                        ? 'bg-primary text-on-primary border-primary'
-                        : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
-                    }`}
-                  >
-                    GP
-                  </button>
-                </div>
-              </div>
+              {/* Track lay-out */}
+<div className="mb-5">
+      <div className="flex items-center gap-2">
+        <span className="text-white/40 text-xs">Track lay-out</span>
+        <div className="relative group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/40 hover:text-white cursor-pointer">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-48 p-2 bg-surface-container-low border border-outline rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs text-white/80">
+      Note: This will change the track layout for all viewers. as the backend will broadcast the change to everyone.
+    </div>
+        </div>
+      </div>
+  <div className="flex gap-2 mt-2">
+    <button
+      onClick={() => {
+        localStorage.setItem('trackLayout', 'N24');
+        setTrackLayout('N24');
+        socket.emit('setTrackLayout', 'N24');
+      }}
+      className={`px-3 py-1 border rounded-md text-xs ${
+        trackLayout === 'N24'
+          ? 'bg-primary text-on-primary border-primary'
+          : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
+      }`}
+    >
+      N24
+    </button>
+
+    <button
+      onClick={() => {
+        localStorage.setItem('trackLayout', 'NLS');
+        setTrackLayout('NLS');
+        socket.emit('setTrackLayout', 'NLS');
+      }}
+      className={`px-3 py-1 border rounded-md text-xs ${
+        trackLayout === 'NLS'
+          ? 'bg-primary text-on-primary border-primary'
+          : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
+      }`}
+    >
+      NLS
+    </button>
+
+    <button
+      onClick={() => {
+        localStorage.setItem('trackLayout', 'GP');
+        setTrackLayout('GP');
+        socket.emit('setTrackLayout', 'GP');
+      }}
+      className={`px-3 py-1 border rounded-md text-xs ${
+        trackLayout === 'GP'
+          ? 'bg-primary text-on-primary border-primary'
+          : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
+      }`}
+    >
+      GP
+    </button>
+  </div>
+</div>
               </div>
               </div>
             </div>

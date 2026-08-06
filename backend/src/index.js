@@ -35,6 +35,19 @@ io.on('connection', (socket) => {
   // Send initial state if needed
   socket.emit('initial_state', timingFeed.getCarStates());
 
+  // Allow frontend to switch track layout
+  socket.on('setTrackLayout', (layout) => {
+    if (['N24', 'NLS', 'GP'].includes(layout)) {
+      engine.setLayout(layout);
+      console.log(`Track layout switched to ${layout} by client ${socket.id}`);
+      
+      // Optional: notify all clients of the new layout
+      io.emit('trackLayoutChanged', layout);
+    } else {
+      console.warn(`Invalid track layout requested: ${layout}`);
+    }
+  });
+
   socket.on('disconnect', () => {
     console.log('Client disconnected:', socket.id);
   });

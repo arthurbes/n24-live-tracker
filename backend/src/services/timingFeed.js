@@ -3,7 +3,7 @@ const WebSocket = require('ws');
 const fs = require('fs');
 const path = require('path');
 const recorder = require('./recorder');
-const sectors = require('../data/sectors.json');
+const sectors = require('../data/sectors_n24.json');
 
 class TimingFeed extends EventEmitter {
   constructor() {
@@ -126,7 +126,7 @@ class TimingFeed extends EventEmitter {
     ws.on('open', () => {
       console.log('Live Timing connected!');
       const subscribeMsg = {
-        eventId: "50",
+        eventId: "20",
         eventPid: [0, 4],
         clientLocalTime: Date.now()
       };
