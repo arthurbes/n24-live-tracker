@@ -3,6 +3,8 @@ import Map, { Marker, Source, Layer } from 'react-map-gl';
 import { io } from 'socket.io-client';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import trackData from './nurburgring_geojson.json';
+import nlsData from './langstrecken_geojson.json';
+import gpData from './grandprix_geojson.json';
 import cornersData from './corners.json';
 import sectorsData from './sectors.json';
 import * as turf from '@turf/turf';
@@ -13,10 +15,34 @@ function App() {
   const [cars, setCars] = useState([]);
   const [filter, setFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [enabledClasses, setEnabledClasses] = useState(import.meta.env.VITE_ENABLED_CLASSES.split(',').map(c => c.trim()));
+  const enabledClasses = JSON.parse(localStorage.getItem('enabledClasses'));
+  useEffect(() => {
+    if (enabledClasses === null) {
+      localStorage.setItem('enabledClasses', JSON.stringify(['SP9']));
+    } else {
+      localStorage.setItem('enabledClasses', JSON.stringify(enabledClasses));
+    }
+  }, [enabledClasses]);
+  useEffect(() => {
+    socket.emit('setTrackLayout', trackLayout);
+
+  const handleLayoutChange = (layout) => {
+    setTrackLayout(layout);
+    localStorage.setItem('trackLayout', layout);
+  };
+
+  socket.on('trackLayoutChanged', handleLayoutChange);
+
+  return () => {
+    socket.off('trackLayoutChanged', handleLayoutChange);
+  };
+}, []); // run once on mount
+  const [trackLayout, setTrackLayout] = useState(
+  () => localStorage.getItem('trackLayout') || 'N24');
   const [hoveredCarId, setHoveredCarId] = useState(null);
   const [code60Sectors, setCode60Sectors] = useState([]);
   const [leaderboardMode, setLeaderboardMode] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
   const [nowTime, setNowTime] = useState(Date.now());
   const [weather, setWeather] = useState({ icon: '☀️', air: '18°C', track: '24°C' });
 
@@ -47,7 +73,8 @@ function App() {
     };
   }, []);
 
-  const availableClasses = ['All', ...new Set(cars.map(c => c.class))].filter(Boolean).filter(c => c === 'All' || enabledClasses.includes(c));
+  const filteredClasses = ['All', ...new Set(cars.map(c => c.class))].filter(Boolean).filter(c => c === 'All' || enabledClasses.includes(c));
+  const availableClasses = [...new Set(cars.map(c => c.class))].filter(Boolean);
   const filteredCars = cars.filter(car => {
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
@@ -68,7 +95,16 @@ function App() {
   });
 
   const trackLengthKm = 25.378;
-  const trackLine = trackData.features ? trackData.features[0] : trackData;
+  let trackLine;
+
+  if (trackLayout === 'NLS') {
+    trackLine = nlsData.features ? nlsData.features[0] : nlsData;
+  } else if (trackLayout === 'GP') {
+    trackLine = gpData.features ? gpData.features[0] : gpData;
+  } else {
+    // Default to N24
+    trackLine = trackData.features ? trackData.features[0] : trackData;
+  }
 
   // May 16, 2026, 10:00 BRT = May 16, 13:00 UTC. Race ends 24h later = May 17, 13:00 UTC
   const raceEndTime = new Date("2026-05-17T13:00:00Z").getTime();
@@ -97,35 +133,17 @@ function App() {
 
   return (
     <>
-      <header className="hidden md:flex justify-between items-center px-margin-desktop py-2 w-full fixed top-0 z-50 bg-surface/60 backdrop-blur-md border-b border-white/10 font-body-fixed text-body-fixed text-primary">
-        <div className="flex items-center gap-4">
-          <span className="font-display-lg text-headline-lg font-extrabold text-primary tracking-tighter uppercase">N24H LIVE TRACKER</span>
-        </div>
-        <div className="flex items-center gap-4">
-          <input
-            type="text"
-            placeholder="Search Driver or #"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="bg-surface-container-highest/80 border border-white/20 rounded px-3 py-1 text-sm text-white placeholder-white/50 focus:outline-none focus:border-primary w-64"
-          />
-        </div>
-        <nav className="flex items-center gap-8">
-          <div className="w-10"></div>{/* Spacer for right alignment since we removed leaderboard link */}
-        </nav>
-      </header>
-
       <main className="flex-grow relative w-full h-screen pb-[80px] md:pb-0 overflow-hidden">
         <Map
           initialViewState={{
             longitude: 6.9475,
             latitude: 50.3341,
             zoom: 12
-          }}
+          }}  
           mapStyle={import.meta.env.VITE_MAPBOX_STYLE}
           mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
         >
-          <Source id="track" type="geojson" data={trackData}>
+          <Source id="track" type="geojson" data={trackLine}>
             <Layer
               id="track-line"
               type="line"
@@ -180,6 +198,7 @@ function App() {
                 <div className="relative w-4 h-4">
                   <div className={`absolute inset-0 rounded-full ${car.speed > 10 ? 'animate-ping' : ''} opacity-75 ${car.class === 'SP9' ? 'bg-primary-container' : car.class === 'CUP2' ? 'bg-tertiary-container' : 'bg-outline'}`}></div>
                   <div className="absolute inset-1 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]"></div>
+                  
                 </div>
                 
                 {/* Fixed orientation popup container */}
@@ -188,7 +207,7 @@ function App() {
                   style={{ transform: `rotate(${-car.bearing}deg)` }}
                 >
                   <div className="absolute top-0 left-2 w-6 h-px bg-white/80"></div>
-                  <div className="absolute -top-7 left-8 bg-surface-container-highest/90 backdrop-blur-md border border-white/20 px-3 py-1.5 rounded-DEFAULT w-max shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                  <div className="absolute -top-7 left-8  bg-surface-container-low/60 backdrop-blur-md border border-white/10 rounded-full px-2 py-2 rounded-DEFAULT w-max shadow-[0_0_15px_rgba(0,0,0,0.5)]">
                     <div className="font-label-caps text-label-caps text-secondary-fixed mb-0.5">
                       {car.class} {car.position > 0 && `| P${car.position}`} {car.classPosition > 0 && `(C${car.classPosition})`}
                       {car.inPit && <span className="ml-2 text-orange-400 font-bold bg-orange-400/20 px-1 rounded">IN PIT</span>}
@@ -204,23 +223,196 @@ function App() {
             </Marker>
           ))}
         </Map>
+        
+        {/* Popup for available classes */}
+        {showPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="backdrop-blur-lg bg-opacity-8 border border-white/10 p-6 rounded-full">
+            <div className="flex justify-between items-start mb-4">
+              {/* Title */}
+              <h3 className="font-headline-md text-headline-md text-secondary-container">Available Classes:</h3>
+              <button
+              onClick={() => setShowPopup(false)}
+                className="text-on-surface hover:text-on-surface/80 p-1 rounded-full"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+          </div>
+            <div className="grid grid-cols-2 gap-4">
+              {/* Left column */}
+              <div className="col-span-1">
+                <ul className="list-disc px-2 list-inside mb-4">
+              {availableClasses.sort().filter(c => c !== 'All').map(c => (
+                <li
+                  key={c}
+                  className="flex items-center justify-between font-body-fixed text-body-fixed text-on-surface cursor-pointer hover:bg-surface-container-high/50 rounded-full px-2"
+                  onClick={() => {
+                    const currentClasses = JSON.parse(localStorage.getItem('enabledClasses') || '[]');
+                    if (currentClasses.includes(c)) {
+                      localStorage.setItem('enabledClasses', JSON.stringify(currentClasses.filter(cls => cls !== c)));
+                    } else {
+                      localStorage.setItem('enabledClasses', JSON.stringify([...currentClasses, c]));
+                    }
+                  }}
+                >
+                  <span>{c}</span>
+                  {enabledClasses.includes(c) ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-500">
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  )}
+                </li>
+              ))}
+            </ul>
+                <div className="mt-2">
+              <a href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const currentClasses = JSON.parse(localStorage.getItem('enabledClasses') || '[]');
+                  const allClasses = availableClasses.filter(c => c !== 'All');
+                  if (currentClasses.length === allClasses.length) {
+                    localStorage.setItem('enabledClasses', JSON.stringify([]));
+                  } else {
+                    localStorage.setItem('enabledClasses', JSON.stringify(allClasses));
+                  }
+                }}
+                className="text-secondary-container text-xs hover:text-on-surface rounded-full hover:bg-white/5"
+              >
+                <div className="flex justify-end">
+                {enabledClasses.length === availableClasses.filter(c => c !== 'All').length ? 'unselect all' : 'select all'}
+                </div>
+              </a>
+            </div>
+              </div>
 
+              {/* Right column with stream URL input */}
+              <div className="col-span-1">
+                <div className="mb-4">
+                  <label htmlFor="streamUrl" className="block text-sm font-medium text-on-surface mb-1">
+                    Stream URL:
+                  </label>
+                  <div className="flex items-center gap-2">
+                    <input
+                    type="text"
+                    id="streamUrl"
+                      value={localStorage.getItem('streamUrl') || ''}
+                onChange={(e) => {
+                  localStorage.setItem('streamUrl', e.target.value);
+                }}
+                className="w-full px-3 py-2 bg-surface-container-low border border-outline rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
+                placeholder="Enter stream URL"
+              />
+                <button
+                  onClick={async () => {
+                    try {
+                      const text = await navigator.clipboard.readText();
+                      localStorage.setItem('streamUrl', text);
+                    } catch (err) {
+                      console.error('Failed to read clipboard contents: ', err);
+                    }
+                  }}
+                  className="p-2 bg-surface-container-low border border-outline rounded-md shadow-sm hover:bg-surface-container-high"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+                </div>
+              </div>
+              {/* Track lay-out */}
+<div className="mb-5">
+      <div className="flex items-center gap-2">
+        <span className="text-white/40 text-xs">Track lay-out</span>
+        <div className="relative group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white/40 hover:text-white cursor-pointer">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-48 p-2 bg-surface-container-low border border-outline rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs text-white/80">
+      Note: This will change the track layout for all viewers. as the backend will broadcast the change to everyone.
+    </div>
+        </div>
+      </div>
+  <div className="flex gap-2 mt-2">
+    <button
+      onClick={() => {
+        localStorage.setItem('trackLayout', 'N24');
+        setTrackLayout('N24');
+        socket.emit('setTrackLayout', 'N24');
+      }}
+      className={`px-3 py-1 border rounded-md text-xs ${
+        trackLayout === 'N24'
+          ? 'bg-primary text-on-primary border-primary'
+          : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
+      }`}
+    >
+      N24
+    </button>
+
+    <button
+      onClick={() => {
+        localStorage.setItem('trackLayout', 'NLS');
+        setTrackLayout('NLS');
+        socket.emit('setTrackLayout', 'NLS');
+      }}
+      className={`px-3 py-1 border rounded-md text-xs ${
+        trackLayout === 'NLS'
+          ? 'bg-primary text-on-primary border-primary'
+          : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
+      }`}
+    >
+      NLS
+    </button>
+
+    <button
+      onClick={() => {
+        localStorage.setItem('trackLayout', 'GP');
+        setTrackLayout('GP');
+        socket.emit('setTrackLayout', 'GP');
+      }}
+      className={`px-3 py-1 border rounded-md text-xs ${
+        trackLayout === 'GP'
+          ? 'bg-primary text-on-primary border-primary'
+          : 'bg-surface-container-low border-outline hover:bg-surface-container-high'
+      }`}
+    >
+      GP
+    </button>
+  </div>
+</div>
+              </div>
+              </div>
+            </div>
+
+          </div>
+      )}
+      
         {/* Sidebar - Leaderboard */}
-        <aside className="absolute top-20 bottom-8 left-margin-desktop w-[450px] z-10 flex flex-col bg-surface-container-highest/90 backdrop-blur-2xl border-t border-l border-white/10 border-r border-b border-black/50 rounded-lg overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] pointer-events-none md:pointer-events-auto">
-          <div className="px-widget-padding py-4 border-b border-white/10 bg-surface-container-low/50 flex justify-between items-center">
+        <aside className="absolute top-5 bottom-10 left-margin-desktop w-[450px] z-10 flex flex-col bg-surface-container-low/60 backdrop-blur-md border border-white/10 rounded-full overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.8)] pointer-events-none hidden md:flex md:pointer-events-auto">
+          <div className="px-widget-padding py-4 border-b border-white/10 flex justify-between items-center">
             <div>
-              <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight uppercase">LEADERBOARD</h2>
+              <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight uppercase">LEADERBOARD</h2>            
             </div>
           </div>
           <div className="flex-grow overflow-y-auto custom-scrollbar">
             <table className="w-full text-left border-collapse pointer-events-auto">
-              <thead className="sticky top-0 bg-surface-container-highest/95 backdrop-blur-md z-10 border-b border-white/10">
+              <thead className="sticky top-0 bg-surface-container-highest/50  z-10 border-b border-white/10">
                 <tr className="font-label-caps text-label-caps text-on-surface-variant uppercase">
                   <th className="py-2 pl-4 pr-2 font-normal w-10">Pos</th>
                   <th className="py-2 px-2 font-normal w-12">Car</th>
                   <th className="py-2 px-2 font-normal">Driver / Model</th>
                   <th className="py-2 pr-4 pl-2 font-normal text-right w-28">
-                    {leaderboardMode === 0 ? 'Last Lap / Gap' : 'Lap / INT'}
+                    {leaderboardMode === 0 ? 'Last / Gap' : 'Lap / INT'}
                   </th>
                 </tr>
               </thead>
@@ -278,8 +470,8 @@ function App() {
           </div>
         </aside>
         {/* Right Info Panel */}
-        <div className="absolute top-20 right-margin-desktop z-10 flex flex-col gap-3">
-          <div className="bg-surface-container-highest/90 backdrop-blur-md border border-white/10 p-4 rounded-lg shadow-lg pointer-events-none">
+        <div className="absolute hidden md:flex top-20 right-margin-desktop z-10 flex flex-col gap-3">
+          <div className="bg-surface-container-low/60 backdrop-blur-md rounded-full p-4 border border-white/10 shadow-lg pointer-events-none">
             <div className="text-secondary-fixed text-xs font-label-caps uppercase mb-1">Time Remaining</div>
             <div className="text-4xl font-headline-lg font-bold text-white mb-3">
               {countdownString}
@@ -301,30 +493,59 @@ function App() {
           </div>
         </div>
         {/* Stream Overlay */}
-        {import.meta.env.VITE_STREAMURL && import.meta.env.VITE_STREAMURL.trim() !== '' && (
-        <div className="absolute bottom-10 right-margin-desktop z-10 w-[80vw] md:w-[20vw] aspect-video bg-black/80 border border-white/20 rounded-lg overflow-hidden shadow-lg">
+        {typeof window !== 'undefined' && localStorage.getItem('streamUrl') && localStorage.getItem('streamUrl').trim() !== '' && (
          <iframe
-            src={import.meta.env.VITE_STREAMURL}
+            src={localStorage.getItem('streamUrl')}
             title="Live Stream"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
             allowFullScreen
-            className="w-full h-full"
+            className="absolute bottom-10 hidden md:flex right-margin-desktop z-10 min-width-[30vw] w-[20vw] aspect-video bg-black/80 border border-white/10 rounded-full shadow-lg"
           ></iframe>
-        </div>
         )}
       </main>
+        {/* Filter Buttons and Search Input */}
+      <div className="hidden md:flex fixed top-5 right-margin-desktop justify-end z-20 items-center max-w-[50vw] bg-surface-container-low/60 backdrop-blur-md p-1.5 rounded-full border border-white/10 shadow-lg">
+        <div className="overflow-x-auto classbar-animation whitespace-nowrap flex gap-2 px-1">
 
-      <div className="hidden md:flex fixed top-24 left-1/2 -translate-x-1/2 z-20 items-center gap-2 bg-surface-container-low/60 backdrop-blur-md p-1.5 rounded-full border border-white/10 shadow-lg">
-        {availableClasses.map(f => (
-          <button
-            key={f}
-            onClick={() => setFilter(f)}
-            className={`${filter === f ? 'bg-secondary-container text-on-secondary-container shadow-[0_0_10px_rgba(195,244,0,0.2)]' : 'text-on-surface-variant hover:text-on-surface hover:bg-white/5'} px-4 py-1.5 rounded-full font-label-caps text-label-caps uppercase transition-colors`}
-          >
-            {f}
-          </button>
-        ))}
+        <div className="overflow-x-auto classbar-animation whitespace-nowrap flex gap-2 px-1">
+      {filteredClasses.map(f => (
+        <button
+          key={f}
+          onClick={() => setFilter(f)}
+          className={`${
+            filter === f 
+            ? 'bg-secondary-container text-on-secondary-container shadow-[0_0_10px_rgba(195,244,0,0.2)]' 
+            : 'text-on-surface-variant hover:text-on-surface hover:bg-white/5'
+            } px-2 py-1.5 rounded-full font-label-caps text-label-caps uppercase transition-colors`}
+    >
+      {f}
+    </button>
+  ))}
+</div>
+        </div>
+        <div className="flex items-center">
+          <input
+            type="text"
+            placeholder="Search Driver or #"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="bg-surface-container-low/60 focus:outline-none focus:ring-primary focus:border-primary backdrop-blur-md rounded-md h-8 border border-white/10 shadow-lg"
+          />
+        </div>
+
+        {/* Add a button to show the popup with available classes */}
+        <button
+          onClick={() => setShowPopup(true)}
+          className="text-primary hover:text-on-surface rounded-full hover:bg-white/5 ml-1 px-1 py-1"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z" />
+  <path strokeLinecap="round" strokeLinejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008Z" />
+</svg>
+        </button>
+
       </div>
+      
     </>
   );
 }
