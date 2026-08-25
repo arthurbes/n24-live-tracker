@@ -124,9 +124,10 @@ class TimingFeed extends EventEmitter {
     const ws = new WebSocket('wss://livetiming.azurewebsites.net/');
 
     ws.on('open', () => {
-      console.log('Live Timing connected!');
+      const eventId = process.env.AZURE_EVENTID || "20";
+      console.log('Live Timing connected!, subscribing to event ID:', eventId);
       const subscribeMsg = {
-        eventId: "20",
+        eventId: eventId,
         eventPid: [0, 4],
         clientLocalTime: Date.now()
       };

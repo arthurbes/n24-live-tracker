@@ -11,6 +11,7 @@ services:
       - REPLAY_MODE=${REPLAY_MODE}
       - LOG_LEVEL=info
       - API_BASE_URL=http://frontend:5173
+      - AZURE_EVENTID=${AZURE_EVENTID}
     volumes:
       - ./backend/replays:/app/backend/replays
     ports:
